@@ -1,0 +1,71 @@
+<?php
+
+namespace common\models;
+
+use Yii;
+
+/**
+ * This is the model class for table "priority".
+ *
+ * @property integer $id
+ * @property string $name
+ * @property string $description
+ * @property string $icon_url
+ * @property string $color
+ *
+ * @property Issue[] $issues
+ * @property Project[] $projects
+ */
+class Priority extends \yii\db\ActiveRecord
+{
+    /**
+     * @inheritdoc
+     */
+    public static function tableName()
+    {
+        return 'priority';
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function rules()
+    {
+        return [
+            [['name'], 'required'],
+            [['description'], 'string'],
+            [['name', 'icon_url', 'color'], 'string', 'max' => 255],
+            [['name'], 'unique'],
+        ];
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'name' => 'Name',
+            'description' => 'Description',
+            'icon_url' => 'Icon Url',
+            'color' => 'Color',
+        ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getIssues()
+    {
+        return $this->hasMany(Issue::className(), ['priority_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getProjects()
+    {
+        return $this->hasMany(Project::className(), ['priority_id' => 'id']);
+    }
+}

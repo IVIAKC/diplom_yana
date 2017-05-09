@@ -1,15 +1,12 @@
 @ident: 10px;
 
-
 html, body{
   height: 100%;
 }
 
-header {
-  padding: 20px 0;
+.menu{
+  height:5%;
 }
-
-
 footer {
   height: 10%;
   background: #7e7e7e;
@@ -26,29 +23,50 @@ footer {
 
 .container {
   position: relative;
-  height: 90%;
+  height: 85%;
   width: 100%;
   padding-left: 45px;
 }
 
 .main-content {
   width: 100%;
+  min-width: 1024px;
   height: 100%;
+  margin: 0 auto;
   padding: 10px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   position: relative;
 }
+
 .main-content .content{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   padding-left: 60px;
   width: 100%;
 }
+
 .main-content .content h1{
   font-weight: 100;
 }
+
 .main-content .content p{
   width: 100%;
   line-height: 160%;
+}
+
+.cell-base{
+  display: block;
+  float: left;
+  width: 100%;
+  min-width: 200px;
+  max-width: 210px;
+  height: 760px;
+  outline: 1px solid #000; /* Чёрная рамка */
+}
+
+.cell-title{
+  min-height: 5%;
+  outline: 1px solid #000; /* Чёрная рамка */
+  text-align: center;
 }

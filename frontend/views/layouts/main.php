@@ -23,18 +23,13 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 <?= Yii::$app->controller->renderPartial('//partials/sidebar.php'); ?>
+<div class="menu">
+
+    Какое-то меню.
+
+</div>
 <div class="container">
     <div class="main-content">
-        <header></header>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/project">project</a></li>
-            </ul>
-        </nav>
-        <div id="heading"></div>
-        <aside></aside>
-        <section></section>
         <?= $content ?>
     </div>
 </div>

@@ -25,7 +25,6 @@ class m170319_164539_create_project_table extends Migration
             'description' => $this->text(),
             'budget' => $this->decimal(19,2),
             'is_deleted' => $this->boolean()->defaultValue(false),
-            'duedate' => $this->timestamp()->defaultValue(null),
             'created_at' => $this->timestamp().' DEFAULT NOW()',
             'updated_at' => $this->timestamp()->defaultValue(null),
         ]);

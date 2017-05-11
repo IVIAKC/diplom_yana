@@ -43,6 +43,12 @@ AppAsset::register($this);
 
         $menuItems[] = ['label' => 'Клиенты', 'url' => ['client/']];
         $menuItems[] = ['label' => 'Приоритеты', 'url' => ['priority/']];
+        $menuItems[] = ['label' => 'Аватарки', 'url' => ['avatar/']];
+        $menuItems[] = ['label' => 'Проекты', 'url' => ['project/']];
+        $menuItems[] = ['label' => 'Задачи', 'url' => ['issue/']];
+        $menuItems[] = ['label' => 'События', 'url' => ['action/']];
+        $menuItems[] = ['label' => 'Файлы', 'url' => ['file-attachment/']];
+        $menuItems[] = ['label' => 'Коментарии', 'url' => ['comment/']];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton('Выйти',['class' => 'btn btn-link logout'])

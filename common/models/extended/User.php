@@ -29,7 +29,7 @@ use Yii;
  * @property Issue[] $issues1
  * @property Project[] $projects
  */
-class User extends \yii\db\ActiveRecord
+class User extends \common\models\User
 {
     /**
      * @inheritdoc
@@ -62,17 +62,17 @@ class User extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'username' => 'Username',
+            'username' => 'Имя пользователя',
             'auth_key' => 'Auth Key',
             'password_hash' => 'Password Hash',
             'password_reset_token' => 'Password Reset Token',
             'email' => 'Email',
-            'status' => 'Status',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
-            'first_name' => 'First Name',
-            'middle_name' => 'Middle Name',
-            'last_name' => 'Last Name',
+            'status' => 'Статус',
+            'created_at' => 'Создание Время',
+            'updated_at' => 'Изменен Время',
+            'first_name' => 'Имя',
+            'middle_name' => 'Отчество',
+            'last_name' => 'Фамилия',
         ];
     }
 

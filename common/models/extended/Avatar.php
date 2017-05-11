@@ -50,11 +50,11 @@ class Avatar extends \common\models\Avatar
     {
         return [
             'id' => 'ID',
-            'filename' => 'Filename',
-            'content_type' => 'Content Type',
-            'owner_id' => 'Owner ID',
-            'avatar_type' => 'Avatar Type',
-            'is_system' => 'Is System',
+            'filename' => 'Имя файла',
+            'content_type' => 'Тип файла',
+            'owner_id' => 'Владелец',
+            'avatar_type' => 'Тип аватара',
+            'is_system' => 'Системный',
         ];
     }
 

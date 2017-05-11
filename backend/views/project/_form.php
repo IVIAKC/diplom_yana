@@ -34,8 +34,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'is_deleted')->textInput() ?>
 
-    <?= $form->field($model, 'duedate')->textInput() ?>
-
     <?= $form->field($model, 'created_at')->textInput() ?>
 
     <?= $form->field($model, 'updated_at')->textInput() ?>

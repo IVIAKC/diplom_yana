@@ -19,7 +19,6 @@ use Yii;
  * @property string $description
  * @property string $budget
  * @property integer $is_deleted
- * @property string $duedate
  * @property string $created_at
  * @property string $updated_at
  *
@@ -29,8 +28,8 @@ use Yii;
  * @property Client $client
  * @property User $lead
  * @property Priority $priority
- * @property ProjectStatus $status
- * @property ProjectType $type
+ * @property Status $status
+ * @property Type $type
  */
 class Project extends \yii\db\ActiveRecord
 {
@@ -52,14 +51,14 @@ class Project extends \yii\db\ActiveRecord
             [['name'], 'required'],
             [['description'], 'string'],
             [['budget'], 'number'],
-            [['duedate', 'created_at', 'updated_at'], 'safe'],
+            [['created_at', 'updated_at'], 'safe'],
             [['name', 'url'], 'string', 'max' => 255],
             [['avatar_id'], 'exist', 'skipOnError' => true, 'targetClass' => Avatar::className(), 'targetAttribute' => ['avatar_id' => 'id']],
             [['client_id'], 'exist', 'skipOnError' => true, 'targetClass' => Client::className(), 'targetAttribute' => ['client_id' => 'id']],
             [['lead_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['lead_id' => 'id']],
             [['priority_id'], 'exist', 'skipOnError' => true, 'targetClass' => Priority::className(), 'targetAttribute' => ['priority_id' => 'id']],
-            [['status_id'], 'exist', 'skipOnError' => true, 'targetClass' => ProjectStatus::className(), 'targetAttribute' => ['status_id' => 'id']],
-            [['type_id'], 'exist', 'skipOnError' => true, 'targetClass' => ProjectType::className(), 'targetAttribute' => ['type_id' => 'id']],
+            [['status_id'], 'exist', 'skipOnError' => true, 'targetClass' => Status::className(), 'targetAttribute' => ['status_id' => 'id']],
+            [['type_id'], 'exist', 'skipOnError' => true, 'targetClass' => Type::className(), 'targetAttribute' => ['type_id' => 'id']],
         ];
     }
 
@@ -81,7 +80,6 @@ class Project extends \yii\db\ActiveRecord
             'description' => 'Description',
             'budget' => 'Budget',
             'is_deleted' => 'Is Deleted',
-            'duedate' => 'Duedate',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
@@ -140,7 +138,7 @@ class Project extends \yii\db\ActiveRecord
      */
     public function getStatus()
     {
-        return $this->hasOne(ProjectStatus::className(), ['id' => 'status_id']);
+        return $this->hasOne(Status::className(), ['id' => 'status_id']);
     }
 
     /**
@@ -148,6 +146,6 @@ class Project extends \yii\db\ActiveRecord
      */
     public function getType()
     {
-        return $this->hasOne(ProjectType::className(), ['id' => 'type_id']);
+        return $this->hasOne(Type::className(), ['id' => 'type_id']);
     }
 }

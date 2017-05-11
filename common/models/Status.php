@@ -1,29 +1,27 @@
 <?php
 
-namespace common\models\extended;
+namespace common\models;
 
 use Yii;
 
 /**
- * This is the model class for table "priority".
+ * This is the model class for table "status".
  *
  * @property integer $id
  * @property string $name
  * @property string $description
- * @property string $icon_url
- * @property string $color
  *
  * @property Issue[] $issues
  * @property Project[] $projects
  */
-class Priority extends \common\models\Priority
+class Status extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'priority';
+        return 'status';
     }
 
     /**
@@ -33,8 +31,7 @@ class Priority extends \common\models\Priority
     {
         return [
             [['name'], 'required'],
-            [['description'], 'string'],
-            [['name', 'icon_url', 'color'], 'string', 'max' => 255],
+            [['name', 'description'], 'string', 'max' => 255],
             [['name'], 'unique'],
         ];
     }
@@ -46,10 +43,8 @@ class Priority extends \common\models\Priority
     {
         return [
             'id' => 'ID',
-            'name' => 'Название',
-            'description' => 'Описание',
-            'icon_url' => 'Икон Url',
-            'color' => 'Цвет',
+            'name' => 'Name',
+            'description' => 'Description',
         ];
     }
 
@@ -58,7 +53,7 @@ class Priority extends \common\models\Priority
      */
     public function getIssues()
     {
-        return $this->hasMany(Issue::className(), ['priority_id' => 'id']);
+        return $this->hasMany(Issue::className(), ['status_id' => 'id']);
     }
 
     /**
@@ -66,6 +61,6 @@ class Priority extends \common\models\Priority
      */
     public function getProjects()
     {
-        return $this->hasMany(Project::className(), ['priority_id' => 'id']);
+        return $this->hasMany(Project::className(), ['status_id' => 'id']);
     }
 }

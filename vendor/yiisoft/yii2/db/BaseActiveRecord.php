@@ -192,11 +192,10 @@ abstract class BaseActiveRecord extends Model implements ActiveRecordInterface
      *
      * @param string|array $condition the conditions that will be put in the WHERE part of the DELETE SQL.
      * Please refer to [[Query::where()]] on how to specify this parameter.
-     * @param array $params the parameters (name => value) to be bound to the query.
      * @return int the number of rows deleted
-     * @throws NotSupportedException if not overrided
+     * @throws NotSupportedException if not overridden.
      */
-    public static function deleteAll($condition = '', $params = [])
+    public static function deleteAll($condition = null)
     {
         throw new NotSupportedException(__METHOD__ . ' is not supported.');
     }
@@ -910,12 +909,12 @@ abstract class BaseActiveRecord extends Model implements ActiveRecordInterface
      * ```php
      * public function beforeSave($insert)
      * {
-     *     if (parent::beforeSave($insert)) {
-     *         // ...custom code here...
-     *         return true;
-     *     } else {
+     *     if (!parent::beforeSave($insert)) {
      *         return false;
      *     }
+     *
+     *     // ...custom code here...
+     *     return true;
      * }
      * ```
      *
@@ -965,12 +964,12 @@ abstract class BaseActiveRecord extends Model implements ActiveRecordInterface
      * ```php
      * public function beforeDelete()
      * {
-     *     if (parent::beforeDelete()) {
-     *         // ...custom code here...
-     *         return true;
-     *     } else {
+     *     if (!parent::beforeDelete()) {
      *         return false;
      *     }
+     *
+     *     // ...custom code here...
+           return true;
      * }
      * ```
      *

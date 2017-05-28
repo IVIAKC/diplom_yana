@@ -81,9 +81,9 @@ class RegularExpressionValidator extends Validator
         $options = [
             'pattern' => new JsExpression($pattern),
             'not' => $this->not,
-            'message' => $this->formatMessage($this->message, [
+            'message' => Yii::$app->getI18n()->format($this->message, [
                 'attribute' => $model->getAttributeLabel($attribute),
-            ]),
+            ], Yii::$app->language),
         ];
         if ($this->skipOnEmpty) {
             $options['skipOnEmpty'] = 1;

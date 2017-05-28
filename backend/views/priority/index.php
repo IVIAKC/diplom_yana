@@ -6,7 +6,7 @@ use yii\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Priorities';
+$this->title = 'Приоритеты';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="priority-index">
@@ -14,20 +14,30 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Priority', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать Приоритет', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
             'name',
             'description:ntext',
-            'icon_url:url',
-            'color',
-
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'attribute' => 'color',
+                'format' => 'html',
+                'value' => function ($data){
+                    return $data->getColorView();
+                }
+            ],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                 'contentOptions' => [
+                     'align' => 'left',
+                     'class' => 'no-wrap-td',
+                     'style' => 'width: 6%'
+                 ],
+            ],
         ],
     ]); ?>
 </div>

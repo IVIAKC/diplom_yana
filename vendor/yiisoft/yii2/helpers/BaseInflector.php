@@ -51,7 +51,6 @@ class BaseInflector
         '/us$/i' => 'uses',
         '/(alias)$/i' => '\1es',
         '/(ax|cris|test)is$/i' => '\1es',
-        '/(currenc)y$/' => '\1ies',
         '/s$/' => 's',
         '/^$/' => '',
         '/$/' => 's',
@@ -98,7 +97,6 @@ class BaseInflector
         '/(n)ews$/i' => '\1\2ews',
         '/(n)etherlands$/i' => '\1\2etherlands',
         '/eaus$/' => 'eau',
-        '/(currenc)ies$/' => '\1y',
         '/^(.*us)$/' => '\\1',
         '/s$/i' => '',
     ];
@@ -134,7 +132,6 @@ class BaseInflector
         'octopus' => 'octopuses',
         'opus' => 'opuses',
         'ox' => 'oxen',
-        'pasta' => 'pasta',
         'penis' => 'penises',
         'sex' => 'sexes',
         'soliloquy' => 'soliloquies',
@@ -362,7 +359,7 @@ class BaseInflector
      */
     public static function camel2words($name, $ucwords = true)
     {
-        $label = strtolower(trim(str_replace([
+        $label = trim(strtolower(str_replace([
             '-',
             '_',
             '.',
@@ -384,9 +381,9 @@ class BaseInflector
     {
         $regex = $strict ? '/[A-Z]/' : '/(?<![A-Z])[A-Z]/';
         if ($separator === '_') {
-            return strtolower(trim(preg_replace($regex, '_\0', $name), '_'));
+            return trim(strtolower(preg_replace($regex, '_\0', $name)), '_');
         } else {
-            return strtolower(trim(str_replace('_', $separator, preg_replace($regex, $separator . '\0', $name)), $separator));
+            return trim(strtolower(str_replace('_', $separator, preg_replace($regex, $separator . '\0', $name))), $separator);
         }
     }
 

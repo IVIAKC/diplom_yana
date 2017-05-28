@@ -208,7 +208,13 @@ class Menu extends Widget
             if ($i === $n - 1 && $this->lastItemCssClass !== null) {
                 $class[] = $this->lastItemCssClass;
             }
-            Html::addCssClass($options, $class);
+            if (!empty($class)) {
+                if (empty($options['class'])) {
+                    $options['class'] = implode(' ', $class);
+                } else {
+                    $options['class'] .= ' ' . implode(' ', $class);
+                }
+            }
 
             $menu = $this->renderItem($item);
             if (!empty($item['items'])) {

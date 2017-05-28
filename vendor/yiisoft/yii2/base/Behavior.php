@@ -23,7 +23,7 @@ namespace yii\base;
 class Behavior extends Object
 {
     /**
-     * @var Component|null the owner of this behavior
+     * @var Component the owner of this behavior
      */
     public $owner;
 

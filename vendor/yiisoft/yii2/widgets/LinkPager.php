@@ -122,11 +122,6 @@ class LinkPager extends Widget
      * @var bool Hide widget when only one page exist.
      */
     public $hideOnSinglePage = true;
-    /**
-     * @var bool whether to render current page button as disabled.
-     * @since 2.0.12
-     */
-    public $disableCurrentPageButton = false;
 
 
     /**
@@ -195,7 +190,7 @@ class LinkPager extends Widget
         // internal pages
         list($beginPage, $endPage) = $this->getPageRange();
         for ($i = $beginPage; $i <= $endPage; ++$i) {
-            $buttons[] = $this->renderPageButton($i + 1, $i, null, $this->disableCurrentPageButton && $i == $currentPage, $i == $currentPage);
+            $buttons[] = $this->renderPageButton($i + 1, $i, null, false, $i == $currentPage);
         }
 
         // next page
@@ -234,7 +229,7 @@ class LinkPager extends Widget
         if ($disabled) {
             Html::addCssClass($options, $this->disabledPageCssClass);
             $tag = ArrayHelper::remove($this->disabledListItemSubTagOptions, 'tag', 'span');
-
+            
             return Html::tag('li', Html::tag($tag, $label, $this->disabledListItemSubTagOptions), $options);
         }
         $linkOptions = $this->linkOptions;

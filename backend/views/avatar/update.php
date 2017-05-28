@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\extended\Avatar */
 
-$this->title = 'Update Avatar: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Avatars', 'url' => ['index']];
+$this->title = 'Изменить Аватарку: ' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Аватарки', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'Изменить';
 ?>
 <div class="avatar-update">
 

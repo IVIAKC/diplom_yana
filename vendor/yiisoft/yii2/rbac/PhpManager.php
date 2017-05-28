@@ -392,7 +392,7 @@ class PhpManager extends BaseManager
      */
     public function getRolesByUser($userId)
     {
-        $roles = $this->getDefaultRoleInstances();
+        $roles = [];
         foreach ($this->getAssignments($userId) as $name => $assignment) {
             $role = $this->items[$assignment->roleName];
             if ($role->type === Item::TYPE_ROLE) {
@@ -410,7 +410,7 @@ class PhpManager extends BaseManager
     {
         $role = $this->getRole($roleName);
 
-        if ($role === null) {
+        if (is_null($role)) {
             throw new InvalidParamException("Role \"$roleName\" not found.");
         }
 

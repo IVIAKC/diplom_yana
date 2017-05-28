@@ -35,9 +35,9 @@ class Avatar extends \common\models\Avatar
     public function rules()
     {
         return [
-            [['filename', 'content_type'], 'required'],
+            [['filename'], 'required'],
             [['owner_id', 'is_system'], 'integer'],
-            [['filename', 'content_type', 'avatar_type'], 'string', 'max' => 255],
+            [['filename'], 'string', 'max' => 255],
             [['filename'], 'unique'],
             [['owner_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['owner_id' => 'id']],
         ];
@@ -51,9 +51,7 @@ class Avatar extends \common\models\Avatar
         return [
             'id' => 'ID',
             'filename' => 'Имя файла',
-            'content_type' => 'Тип файла',
             'owner_id' => 'Владелец',
-            'avatar_type' => 'Тип аватара',
             'is_system' => 'Системный',
         ];
     }

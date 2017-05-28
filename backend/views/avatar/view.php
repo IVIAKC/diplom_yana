@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model common\models\extended\Avatar */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Avatars', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Аватарки', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="avatar-view">
@@ -30,9 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'filename',
-            'content_type',
             'owner_id',
-            'avatar_type',
             'is_system',
         ],
     ]) ?>

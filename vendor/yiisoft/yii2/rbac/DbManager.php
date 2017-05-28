@@ -466,7 +466,7 @@ class DbManager extends BaseManager
             ->andWhere(['a.user_id' => (string) $userId])
             ->andWhere(['b.type' => Item::TYPE_ROLE]);
 
-        $roles = $this->getDefaultRoleInstances();
+        $roles = [];
         foreach ($query->all($this->db) as $row) {
             $roles[$row['name']] = $this->populateItem($row);
         }
@@ -480,7 +480,7 @@ class DbManager extends BaseManager
     {
         $role = $this->getRole($roleName);
 
-        if ($role === null) {
+        if (is_null($role)) {
             throw new InvalidParamException("Role \"$roleName\" not found.");
         }
 
@@ -987,11 +987,7 @@ class DbManager extends BaseManager
         $query = (new Query)->from($this->ruleTable);
         $this->rules = [];
         foreach ($query->all($this->db) as $row) {
-            $data = $row['data'];
-            if (is_resource($data)) {
-                $data = stream_get_contents($data);
-            }
-            $this->rules[$row['name']] = unserialize($data);
+            $this->rules[$row['name']] = unserialize($row['data']);
         }
 
         $query = (new Query)->from($this->itemChildTable);
@@ -1008,7 +1004,7 @@ class DbManager extends BaseManager
     /**
      * Returns all role assignment information for the specified role.
      * @param string $roleName
-     * @return string[] the ids. An empty array will be
+     * @return Assignment[] the assignments. An empty array will be
      * returned if role is not assigned to any user.
      * @since 2.0.7
      */

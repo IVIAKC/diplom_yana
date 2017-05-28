@@ -1,5 +1,6 @@
 <?php
 
+use kartik\color\ColorInput;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -18,10 +19,12 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'icon_url')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'color')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'color')->widget(ColorInput::classname(), [
+        'options' => ['placeholder' => 'Выбирети цвет ...'],
+    ]); ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Создать' : 'Изменить', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

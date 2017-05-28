@@ -27,13 +27,12 @@ trait QueryTrait
      */
     public $where;
     /**
-     * @var int|Expression maximum number of records to be returned. May be an instance of [[Expression]].
-     * If not set or less than 0, it means no limit.
+     * @var int maximum number of records to be returned. If not set or less than 0, it means no limit.
      */
     public $limit;
     /**
-     * @var int|Expression zero-based offset from where the records are to be returned.
-     * May be an instance of [[Expression]]. If not set or less than 0, it means starting from the beginning.
+     * @var int zero-based offset from where the records are to be returned. If not set or
+     * less than 0, it means starting from the beginning.
      */
     public $offset;
     /**
@@ -376,7 +375,7 @@ trait QueryTrait
 
     /**
      * Sets the LIMIT part of the query.
-     * @param int|Expression|null $limit the limit. Use null or negative value to disable limit.
+     * @param int $limit the limit. Use null or negative value to disable limit.
      * @return $this the query object itself
      */
     public function limit($limit)
@@ -387,7 +386,7 @@ trait QueryTrait
 
     /**
      * Sets the OFFSET part of the query.
-     * @param int|Expression|null $offset the offset. Use null or negative value to disable offset.
+     * @param int $offset the offset. Use null or negative value to disable offset.
      * @return $this the query object itself
      */
     public function offset($offset)

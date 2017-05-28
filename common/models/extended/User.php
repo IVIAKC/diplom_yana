@@ -139,4 +139,8 @@ class User extends \common\models\User
     {
         return $this->hasMany(Project::className(), ['lead_id' => 'id']);
     }
+
+    public static function getUsersList(){
+        return self::find()->select(['username'])->indexBy('id')->column();
+    }
 }

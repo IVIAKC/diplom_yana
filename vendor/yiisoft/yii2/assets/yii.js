@@ -273,10 +273,8 @@ window.yii = (function ($) {
                 return {};
             }
 
-            var pairs = $.grep(url.substring(pos + 1).split('#')[0].split('&'), function (value) {
-                return value !== '';
-            });
-            var params = {};
+            var pairs = url.substring(pos + 1).split('#')[0].split('&'),
+                params = {};
 
             for (var i = 0, len = pairs.length; i < len; i++) {
                 var pair = pairs[i].split('=');
@@ -485,7 +483,7 @@ window.yii = (function ($) {
     function isReloadableAsset(url) {
         for (var i = 0; i < pub.reloadableScripts.length; i++) {
             var rule = getAbsoluteUrl(pub.reloadableScripts[i]);
-            var match = new RegExp("^" + escapeRegExp(rule).split('\\*').join('.+') + "$").test(url);
+            var match = new RegExp("^" + escapeRegExp(rule).split('\\*').join('.*') + "$").test(url);
             if (match === true) {
                 return true;
             }

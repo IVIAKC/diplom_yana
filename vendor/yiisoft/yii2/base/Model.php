@@ -424,7 +424,7 @@ class Model extends Component implements IteratorAggregate, ArrayAccess, Arrayab
         $validators = [];
         $scenario = $this->getScenario();
         foreach ($this->getValidators() as $validator) {
-            if ($validator->isActive($scenario) && ($attribute === null || in_array($attribute, $validator->getAttributeNames(), true))) {
+            if ($validator->isActive($scenario) && ($attribute === null || in_array($attribute, $validator->attributes, true))) {
                 $validators[] = $validator;
             }
         }
@@ -849,7 +849,7 @@ class Model extends Component implements IteratorAggregate, ArrayAccess, Arrayab
     public static function loadMultiple($models, $data, $formName = null)
     {
         if ($formName === null) {
-            /* @var $first Model|false */
+            /* @var $first Model */
             $first = reset($models);
             if ($first === false) {
                 return false;
@@ -861,10 +861,12 @@ class Model extends Component implements IteratorAggregate, ArrayAccess, Arrayab
         foreach ($models as $i => $model) {
             /* @var $model Model */
             if ($formName == '') {
-                if (!empty($data[$i]) && $model->load($data[$i], '')) {
+                if (!empty($data[$i])) {
+                    $model->load($data[$i], '');
                     $success = true;
                 }
-            } elseif (!empty($data[$formName][$i]) && $model->load($data[$formName][$i], '')) {
+            } elseif (!empty($data[$formName][$i])) {
+                $model->load($data[$formName][$i], '');
                 $success = true;
             }
         }

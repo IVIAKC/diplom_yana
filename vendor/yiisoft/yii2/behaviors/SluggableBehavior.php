@@ -65,14 +65,12 @@ class SluggableBehavior extends AttributeBehavior
      */
     public $slugAttribute = 'slug';
     /**
-     * @var string|array|null the attribute or list of attributes whose value will be converted into a slug
-     * or `null` meaning that the `$value` property will be used to generate a slug. 
+     * @var string|array the attribute or list of attributes whose value will be converted into a slug
      */
     public $attribute;
     /**
-     * @var callable|string|null the value that will be used as a slug. This can be an anonymous function
-     * or an arbitrary value or null. If the former, the return value of the function will be used as a slug.
-     * If `null` then the `$attribute` property will be used to generate a slug.
+     * @var string|callable the value that will be used as a slug. This can be an anonymous function
+     * or an arbitrary value. If the former, the return value of the function will be used as a slug.
      * The signature of the function should be as follows,
      *
      * ```php
@@ -138,17 +136,17 @@ class SluggableBehavior extends AttributeBehavior
      */
     protected function getValue($event)
     {
-        if (!$this->isNewSlugNeeded()) {
-            return $this->owner->{$this->slugAttribute};
-        }
-
         if ($this->attribute !== null) {
-            $slugParts = [];
-            foreach ((array) $this->attribute as $attribute) {
-                $slugParts[] = ArrayHelper::getValue($this->owner, $attribute);
-            }
+            if ($this->isNewSlugNeeded()) {
+                $slugParts = [];
+                foreach ((array) $this->attribute as $attribute) {
+                    $slugParts[] = ArrayHelper::getValue($this->owner, $attribute);
+                }
 
-            $slug = $this->generateSlug($slugParts);
+                $slug = $this->generateSlug($slugParts);
+            } else {
+                return $this->owner->{$this->slugAttribute};
+            }
         } else {
             $slug = parent::getValue($event);
         }
@@ -171,10 +169,6 @@ class SluggableBehavior extends AttributeBehavior
 
         if ($this->immutable) {
             return false;
-        }
-
-        if ($this->attribute === null) {
-            return true;
         }
 
         foreach ((array)$this->attribute as $attribute) {

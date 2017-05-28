@@ -304,7 +304,7 @@ class MemCache extends Cache
      * Stores multiple key-value pairs in cache.
      * @param array $data array where key corresponds to cache key while value is the value stored
      * @param int $duration the number of seconds in which the cached values will expire. 0 means never expire.
-     * @return array array of failed keys.
+     * @return array array of failed keys. Always empty in case of using memcached.
      */
     protected function setValues($data, $duration)
     {
@@ -313,10 +313,9 @@ class MemCache extends Cache
             // @see http://php.net/manual/en/memcache.set.php
             // @see http://php.net/manual/en/memcached.expiration.php
             $expire = $duration > 0 ? $duration + time() : 0;
+            $this->_cache->setMulti($data, $expire);
 
-            // Memcached::setMulti() returns boolean
-            // @see http://php.net/manual/en/memcached.setmulti.php
-            return $this->_cache->setMulti($data, $expire) ? [] : array_keys($data);
+            return [];
         } else {
             return parent::setValues($data, $duration);
         }

@@ -1,5 +1,7 @@
 <?php
 
+use kartik\file\FileInput;
+use kartik\select2\Select2;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -12,18 +14,14 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'filename')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'filename')->widget(FileInput::classname(), [
+        'options' => ['accept' => 'image/*'],
+    ]);?>
 
-    <?= $form->field($model, 'content_type')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'owner_id')->textInput() ?>
-
-    <?= $form->field($model, 'avatar_type')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'is_system')->textInput() ?>
+    <?= $form->field($model, 'is_system')->checkbox() ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Создать' : 'Удалить', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

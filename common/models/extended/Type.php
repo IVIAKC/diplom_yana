@@ -63,4 +63,8 @@ class Type extends \common\models\Type
     {
         return $this->hasMany(Project::className(), ['type_id' => 'id']);
     }
+
+    public static function getTypeList(){
+        return self::find()->select('name')->indexBy('id')->column();
+    }
 }

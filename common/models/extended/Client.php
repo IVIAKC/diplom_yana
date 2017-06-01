@@ -43,4 +43,8 @@ class Client extends \common\models\Client
             'name' => 'Имя',
         ];
     }
+
+    public static function getClientList(){
+        return self::find()->select('name')->indexBy('id')->column();
+    }
 }

@@ -101,7 +101,9 @@ class ProjectController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $model = $this->findModel($id);
+        $model->is_deleted = 1;
+        $model->save();
 
         return $this->redirect(['index']);
     }

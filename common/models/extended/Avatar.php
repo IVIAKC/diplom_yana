@@ -87,4 +87,8 @@ class Avatar extends \common\models\Avatar
     {
         return $this->hasMany(ProjectType::className(), ['avatar_id' => 'id']);
     }
+
+    public static function getAvatarList(){
+        return self::find()->select('filename')->indexBy('id')->column();
+    }
 }

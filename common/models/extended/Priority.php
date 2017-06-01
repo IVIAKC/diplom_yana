@@ -68,4 +68,8 @@ class Priority extends \common\models\Priority
     {
         return $this->hasMany(Project::className(), ['priority_id' => 'id']);
     }
+
+    public static function getPriorityList(){
+        return self::find()->select('name')->indexBy('id')->column();
+    }
 }

@@ -27,6 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'style' => 'width: 6%'
                 ],
             ],
+            'id',
             'name',
             [
                 'class' => 'yii\grid\ActionColumn',

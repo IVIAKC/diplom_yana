@@ -3,6 +3,9 @@
 namespace common\models\extended;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
+use yii\db\ActiveRecord;
+use yii\db\Expression;
 
 /**
  * This is the model class for table "project".
@@ -33,6 +36,21 @@ use Yii;
  */
 class Project extends \common\models\Project
 {
+
+    public function behaviors()
+    {
+        return [
+            'timestamp' => [
+                'class' => TimestampBehavior::className(),
+                'attributes' => [
+                    ActiveRecord::EVENT_BEFORE_INSERT => ['created_at', 'updated_at'],
+                    ActiveRecord::EVENT_BEFORE_UPDATE => 'updated_at',
+                ],
+                'value' => new Expression('NOW()'),
+            ],
+        ];
+    }
+
     /**
      * @inheritdoc
      */
@@ -147,5 +165,9 @@ class Project extends \common\models\Project
     public function getType()
     {
         return $this->hasOne(Type::className(), ['id' => 'type_id']);
+    }
+
+    public static function getProjectList(){
+        return self::find()->select('name')->indexBy('id')->column();
     }
 }

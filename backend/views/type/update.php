@@ -3,14 +3,14 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\extended\Project */
+/* @var $model common\models\extended\Type */
 
-$this->title = 'Изменить Проект: ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Проекты', 'url' => ['index']];
+$this->title = 'Update Type: ' . $model->name;
+$this->params['breadcrumbs'][] = ['label' => 'Types', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Изменить';
+$this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="project-update">
+<div class="type-update">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

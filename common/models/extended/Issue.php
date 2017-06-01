@@ -180,4 +180,8 @@ class Issue extends \common\models\Issue
     {
         return $this->hasOne(Type::className(), ['id' => 'type_id']);
     }
+
+    public static function getIssueList(){
+        return self::find()->select('summary')->indexBy('id')->column();
+    }
 }

@@ -4,13 +4,13 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model common\models\extended\FileAttachment */
+/* @var $model common\models\extended\Type */
 
-$this->title = 'Create File Attachment';
-$this->params['breadcrumbs'][] = ['label' => 'File Attachments', 'url' => ['index']];
+$this->title = 'Create Type';
+$this->params['breadcrumbs'][] = ['label' => 'Types', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="file-attachment-create">
+<div class="type-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

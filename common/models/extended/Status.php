@@ -63,4 +63,9 @@ class Status extends \common\models\Status
     {
         return $this->hasMany(Project::className(), ['status_id' => 'id']);
     }
+
+    public static function getStatusList(){
+        return self::find()->select('name')->indexBy('id')->column();
+
+    }
 }

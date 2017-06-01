@@ -98,4 +98,8 @@ class FileAttachment extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Project::className(), ['id' => 'project_id']);
     }
+
+    public  static function getFileList(){
+        return self::find()->select('filename')->indexBy('id')->column();
+    }
 }

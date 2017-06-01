@@ -3,16 +3,16 @@
 namespace backend\controllers;
 
 use Yii;
-use common\models\extended\FileAttachment;
+use common\models\extended\Type;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * FileAttachmentController implements the CRUD actions for FileAttachment model.
+ * TypeController implements the CRUD actions for Type model.
  */
-class FileAttachmentController extends Controller
+class TypeController extends Controller
 {
     /**
      * @inheritdoc
@@ -30,13 +30,13 @@ class FileAttachmentController extends Controller
     }
 
     /**
-     * Lists all FileAttachment models.
+     * Lists all Type models.
      * @return mixed
      */
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
-            'query' => FileAttachment::find(),
+            'query' => Type::find(),
         ]);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class FileAttachmentController extends Controller
     }
 
     /**
-     * Displays a single FileAttachment model.
+     * Displays a single Type model.
      * @param integer $id
      * @return mixed
      */
@@ -57,7 +57,44 @@ class FileAttachmentController extends Controller
     }
 
     /**
-     * Deletes an existing FileAttachment model.
+     * Creates a new Type model.
+     * If creation is successful, the browser will be redirected to the 'view' page.
+     * @return mixed
+     */
+    public function actionCreate()
+    {
+        $model = new Type();
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
+        } else {
+            return $this->render('create', [
+                'model' => $model,
+            ]);
+        }
+    }
+
+    /**
+     * Updates an existing Type model.
+     * If update is successful, the browser will be redirected to the 'view' page.
+     * @param integer $id
+     * @return mixed
+     */
+    public function actionUpdate($id)
+    {
+        $model = $this->findModel($id);
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
+        } else {
+            return $this->render('update', [
+                'model' => $model,
+            ]);
+        }
+    }
+
+    /**
+     * Deletes an existing Type model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -70,15 +107,15 @@ class FileAttachmentController extends Controller
     }
 
     /**
-     * Finds the FileAttachment model based on its primary key value.
+     * Finds the Type model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return FileAttachment the loaded model
+     * @return Type the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = FileAttachment::findOne($id)) !== null) {
+        if (($model = Type::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

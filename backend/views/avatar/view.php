@@ -30,7 +30,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'filename',
-            'owner_id',
             'is_system',
         ],
     ]) ?>

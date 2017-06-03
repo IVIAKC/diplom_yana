@@ -16,8 +16,6 @@ class m170319_172448_create_avatar_table extends Migration
             'id' => $this->primaryKey(11)->unsigned(),
             'filename' => $this->string(255)->unique()->notNull(),
             'content_type' => $this->string(255)->notNull(),
-            'owner_id' => $this->integer(11)->unsigned(),
-            'avatar_type' => $this->string(255),
             'is_system' => $this->boolean()->defaultValue(false),
         ]);
     }

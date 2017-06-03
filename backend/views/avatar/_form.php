@@ -7,16 +7,15 @@ use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\extended\Avatar */
+/* @var $fileModel common\models\extended\File */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
 <div class="avatar-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
-    <?= $form->field($model, 'filename')->widget(FileInput::classname(), [
-        'options' => ['accept' => 'image/*'],
-    ]);?>
+    <?= $form->field($fileModel, 'file')->fileInput() ?>
 
     <?= $form->field($model, 'is_system')->checkbox() ?>
 

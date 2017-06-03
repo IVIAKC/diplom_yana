@@ -11,7 +11,7 @@ class m170320_133726_add_foreign_key extends Migration
 
 //        $this->addForeignKey('FK_issue_type_avatar_id','issue_type','avatar_id','avatar','id','cascade','cascade');
         
-        $this->addForeignKey('FK_avatar_owner_id','avatar','owner_id','user','id','cascade','cascade');
+//        $this->addForeignKey('FK_avatar_owner_id','avatar','owner_id','user','id','cascade','cascade');
 
         $this->addForeignKey('FK_file_attachment_issue_id','file_attachment','issue_id','issue','id','cascade','cascade');
         $this->addForeignKey('FK_file_attachment_project_id','file_attachment','project_id','project','id','cascade','cascade');

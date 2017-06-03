@@ -50,6 +50,7 @@ AppAsset::register($this);
         $menuItems[] = ['label' => 'Файлы', 'url' => ['file-attachment/']];
         $menuItems[] = ['label' => 'Коментарии', 'url' => ['comment/']];
         $menuItems[] = ['label' => 'Типы', 'url' => ['type/']];
+        $menuItems[] = ['label' => 'Статусы', 'url' => ['status/']];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton('Выйти',['class' => 'btn btn-link logout'])

@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\extended\Type */
+/* @var $model common\models\extended\Status */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Типы', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Статусы', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="type-view">
+<div class="status-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

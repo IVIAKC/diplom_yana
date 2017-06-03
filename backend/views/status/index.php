@@ -6,15 +6,15 @@ use yii\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Типы';
+$this->title = 'Statuses';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="type-index">
+<div class="status-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Создать Тип', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать Статус', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

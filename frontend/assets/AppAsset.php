@@ -12,7 +12,6 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $depends = [
-        'opw\react\ReactAsset',
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
         'frontend\assets\FontAwesomeAsset'

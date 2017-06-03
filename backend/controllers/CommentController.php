@@ -101,7 +101,8 @@ class CommentController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $model = $this->findModel($id);
+        $model->setDeleted();
 
         return $this->redirect(['index']);
     }

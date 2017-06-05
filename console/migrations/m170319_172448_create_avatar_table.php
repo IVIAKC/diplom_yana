@@ -14,7 +14,6 @@ class m170319_172448_create_avatar_table extends Migration
     {
         $this->createTable('avatar', [
             'id' => $this->primaryKey(11)->unsigned(),
-            'content_type' => $this->string(255)->notNull(),
             'file_id' => $this->integer(11)->unsigned()->notNull(),
             'is_system' => $this->boolean()->defaultValue(false),
         ]);

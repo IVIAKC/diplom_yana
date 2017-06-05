@@ -17,7 +17,7 @@ class m170319_170843_create_priority_table extends Migration
             'name' => $this->string(255)->notNull()->unique(),
             'description' => $this->text(),
             'color' => $this->string(255)->defaultValue('#ffffff'),
-            'content_id' => $this->integer(11)->unsigned()->notNull(),
+            'context_id' => $this->integer(11)->unsigned()->notNull(),
         ]);
     }
 

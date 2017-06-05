@@ -16,8 +16,8 @@ class m170319_170843_create_priority_table extends Migration
             'id' => $this->primaryKey(11)->unsigned(),
             'name' => $this->string(255)->notNull()->unique(),
             'description' => $this->text(),
-            'icon_url' => $this->string(255),
             'color' => $this->string(255)->defaultValue('#ffffff'),
+            'content_id' => $this->integer(11)->unsigned()->notNull(),
         ]);
     }
 

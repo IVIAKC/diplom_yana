@@ -18,7 +18,6 @@ $this->params['breadcrumbs'][] = 'Изменить';
     <?= $this->render('_form', [
         'model' => $model,
         'fileModel' => $fileModel,
-
     ]) ?>
 
 </div>

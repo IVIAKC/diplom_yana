@@ -22,7 +22,12 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
             'id',
             'filename',
-            'content_type',
+            [
+                'attribute' => 'is_system',
+                'value' => function ($data){
+                    return $data->is_system ? 'Да':'Нет';
+                }
+            ],
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

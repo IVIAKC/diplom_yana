@@ -82,4 +82,8 @@ class User extends \yii\db\ActiveRecord
             'avatar_id' => 'Аватарка',
         ];
     }
+
+    public static function getUserList(){
+        return self::find()->select('username')->orderBy('username')->indexBy('id')->column();
+    }
 }

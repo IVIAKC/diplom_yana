@@ -2,6 +2,7 @@
 
 namespace backend\controllers;
 
+use common\models\extended\User;
 use Yii;
 use common\models\extended\Comment;
 use common\models\search\CommentSearch;
@@ -41,6 +42,7 @@ class CommentController extends Controller
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'userModel' => new User(),
         ]);
     }
 

@@ -19,7 +19,7 @@ class PrioritySearch extends Priority
     {
         return [
             [['id', 'context_id'], 'integer'],
-            [['name', 'description', 'color'], 'safe'],
+            [['name', 'description'], 'safe'],
         ];
     }
 
@@ -64,8 +64,7 @@ class PrioritySearch extends Priority
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])
-            ->andFilterWhere(['like', 'description', $this->description])
-            ->andFilterWhere(['like', 'color', $this->color]);
+            ->andFilterWhere(['like', 'description', $this->description]);
 
         return $dataProvider;
     }

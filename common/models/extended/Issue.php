@@ -89,4 +89,7 @@ class Issue extends \common\models\Issue
         ];
     }
 
+    public static function getIssueList(){
+        return self::find()->select('summary')->orderBy('summary')->indexBy('id')->column();
+    }
 }

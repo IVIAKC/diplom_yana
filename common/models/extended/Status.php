@@ -53,4 +53,7 @@ class Status extends \common\models\Status
         ];
     }
 
+    public static function getStatusList(){
+        return self::find()->select('name')->orderBy('name')->indexBy('id')->column();
+    }
 }

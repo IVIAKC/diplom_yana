@@ -84,5 +84,7 @@ class Project extends \common\models\Project
         ];
     }
 
-
+    public static function getProjectList(){
+        return self::find()->select('name')->orderBy('name')->indexBy('id')->column();
+    }
 }

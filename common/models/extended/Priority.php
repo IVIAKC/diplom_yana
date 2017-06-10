@@ -56,5 +56,12 @@ class Priority extends \common\models\Priority
         ];
     }
 
+    public static function getPriorityList(){
+        return self::find()->select('name')->orderBy('name')->indexBy('id')->column();
+    }
+
+    public function getColorView(){
+        return "<div style='width: 100%; height: 20px; background: $this->color'></div>";
+    }
 
 }

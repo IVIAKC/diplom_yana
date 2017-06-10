@@ -1,5 +1,7 @@
 <?php
 
+use common\models\extended\Context;
+use kartik\select2\Select2;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -18,7 +20,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'color')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'context_id')->textInput() ?>
+    <?= $form->field($model, 'context_id')->widget(Select2::classname(), [
+        'data' => Context::getContextList(),
+        'options' => ['placeholder' => 'Выберите окружение'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]); ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Создать' : 'Изменить', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

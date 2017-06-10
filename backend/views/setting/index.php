@@ -24,12 +24,29 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'is_editable',
-            'is_list',
+            [
+                'attribute' => 'is_editable',
+                'value' => function ($data){
+                    return $data->is_editable ? 'Да' : 'Нет';
+                },
+                'filter' => [
+                    0 => 'Нет',
+                    1 => 'Да',
+                ],
+            ],
+            [
+                'attribute' => 'is_list',
+                'value' => function ($data){
+                    return $data->is_list ? 'Да' : 'Нет';
+                },
+                'filter' => [
+                    0 => 'Нет',
+                    1 => 'Да',
+                ],
+            ],
             'alias',
             'name',
-             'value',
+            'value',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

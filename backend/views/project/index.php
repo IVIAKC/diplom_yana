@@ -1,5 +1,10 @@
 <?php
 
+use common\models\extended\Client;
+use common\models\extended\Priority;
+use common\models\extended\Status;
+use common\models\extended\Type;
+use common\models\extended\User;
 use yii\helpers\Html;
 use yii\grid\GridView;
 
@@ -24,18 +29,47 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'avatar_id',
-            'lead_id',
-            'status_id',
-            'type_id',
-             'priority_id',
-             'client_id',
-             'name',
-             'url:url',
-             'description:ntext',
-             'budget',
-             'is_deleted',
+            'name',
+            'description:ntext',
+
+            [
+                'attribute' => 'lead_id',
+                'format' => 'html',
+                'value' => function($data){
+                    return Html::a($data->lead->username,['user/view', 'id' => $data->lead_id]);
+                },
+                'filter' => User::getUserList(),
+
+            ],
+            [
+                'attribute' => 'status_id',
+                'format' => 'html',
+                'value' => function($data){
+                    return Html::a($data->status->name,['status/view', 'id' => $data->status_id]);
+                },
+                'filter' => Status::getStatusList(),
+            ],
+
+            [
+                'attribute' => 'priority_id',
+                'format' => 'html',
+                'value' => function($data){
+                    return Html::a($data->priority->name,['priority/view', 'id' => $data->priority_id]);
+                },
+                'filter' => Priority::getPriorityList(),
+
+            ],
+
+            [
+                'attribute' => 'is_deleted',
+                'value' => function ($data) {
+                    return $data->is_deleted ? 'Да' : 'Нет';
+                },
+                'filter' => [
+                    0 => 'Нет',
+                    1 => 'Да',
+                ]
+            ],
              'created_at',
              'updated_at',
 

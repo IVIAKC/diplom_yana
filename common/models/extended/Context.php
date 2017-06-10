@@ -50,4 +50,8 @@ class Context extends \common\models\Context
         ];
     }
 
+    public static function getContextList(){
+        return self::find()->select('alias')->orderBy('alias')->indexBy('id')->column();
+    }
+
 }

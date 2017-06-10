@@ -41,13 +41,29 @@ AppAsset::register($this);
         $menuItems[] = ['label' => 'Войти', 'url' => ['/site/login']];
     } else {
 
-        $menuItems[] = ['label' => 'Аватарки', 'url' => ['avatar/']];
         $menuItems[] = ['label' => 'Клиенты', 'url' => ['client/']];
-        $menuItems[] = ['label' => 'Комментарии', 'url' => ['comment/']];
-        $menuItems[] = ['label' => 'Окружение', 'url' => ['context/']];
         $menuItems[] = ['label' => 'Задачи', 'url' => ['issue/']];
-        $menuItems[] = ['label' => 'Приоритеты', 'url' => ['priority/']];
-        $menuItems[] = ['label' => 'Настройки', 'url' => ['setting/']];
+        $menuItems[] = ['label' => 'Проекты', 'url' => ['project/']];
+        $menuItems[] = [
+            'label' => 'Параметры',
+            'items' => [
+                    ['label' => 'Приоритеты', 'url' => ['priority/']],
+                    ['label' => 'Статусы', 'url' => ['status/']],
+                    ['label' => 'Типы', 'url' => ['type/']],
+                    ['label' => 'Окружение', 'url' => ['context/']],
+
+
+            ]
+        ];
+        $menuItems[] = [
+            'label' => 'Системное',
+            'items' => [
+                    ['label' => 'Настройки', 'url' => ['setting/']],
+                    ['label' => 'Аватарки', 'url' => ['avatar/']],
+                    ['label' => 'Комментарии', 'url' => ['comment/']],
+                    ['label' => 'Файлы', 'url' => ['file/']],
+            ]
+        ];
 
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')

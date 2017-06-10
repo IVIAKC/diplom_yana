@@ -45,4 +45,7 @@ class Client extends \common\models\Client
         ];
     }
 
+    public static function getClientList(){
+        return self::find()->select('name')->orderBy('name')->indexBy('id')->column();
+    }
 }

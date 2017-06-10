@@ -1,5 +1,12 @@
 <?php
 
+use common\models\extended\Avatar;
+use common\models\extended\Client;
+use common\models\extended\Priority;
+use common\models\extended\Status;
+use common\models\extended\Type;
+use common\models\extended\User;
+use kartik\select2\Select2;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -12,18 +19,6 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'avatar_id')->textInput() ?>
-
-    <?= $form->field($model, 'lead_id')->textInput() ?>
-
-    <?= $form->field($model, 'status_id')->textInput() ?>
-
-    <?= $form->field($model, 'type_id')->textInput() ?>
-
-    <?= $form->field($model, 'priority_id')->textInput() ?>
-
-    <?= $form->field($model, 'client_id')->textInput() ?>
-
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'url')->textInput(['maxlength' => true]) ?>
@@ -32,11 +27,47 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'budget')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'is_deleted')->textInput() ?>
+    <?= $form->field($model, 'avatar_id')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'created_at')->textInput() ?>
+    <?= $form->field($model, 'lead_id')->widget(Select2::classname(), [
+        'data' => User::getUserList(),
+        'options' => ['placeholder' => 'Выберите аватар'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]); ?>
 
-    <?= $form->field($model, 'updated_at')->textInput() ?>
+    <?= $form->field($model, 'status_id')->widget(Select2::classname(), [
+        'data' => Status::getStatusList(),
+        'options' => ['placeholder' => 'Выберите аватар'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]); ?>
+
+    <?= $form->field($model, 'type_id')->widget(Select2::classname(), [
+        'data' => Type::getTypeList(),
+        'options' => ['placeholder' => 'Выберите статус'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]); ?>
+
+    <?= $form->field($model, 'priority_id')->widget(Select2::classname(), [
+        'data' => Priority::getPriorityList(),
+        'options' => ['placeholder' => 'Выберите статус'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]); ?>
+
+    <?= $form->field($model, 'client_id')->widget(Select2::classname(), [
+        'data' => Client::getClientList(),
+        'options' => ['placeholder' => 'Выберите статус'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]); ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Создать' : 'Изменить', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

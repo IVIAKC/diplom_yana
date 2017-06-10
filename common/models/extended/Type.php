@@ -52,4 +52,8 @@ class Type extends \common\models\Type
         ];
     }
 
+    public static function getTypeList(){
+        return self::find()->select('name')->orderBy('name')->indexBy('id')->column();
+    }
+
 }

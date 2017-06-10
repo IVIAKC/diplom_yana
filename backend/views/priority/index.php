@@ -1,5 +1,6 @@
 <?php
 
+use common\models\extended\Context;
 use yii\helpers\Html;
 use yii\grid\GridView;
 
@@ -23,11 +24,22 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
             'name',
-            'description:ntext',
-            'color',
-            'context_id',
+            [
+                'attribute' => 'color',
+                'format' => 'html',
+                'value' => function ($data) {
+                    return $data->getColorView();
+                },
+            ],
+            [
+                'attribute' => 'context_id',
+                'format' => 'html',
+                'value' => function ($data){
+                    return Html::a($data->context->alias,['context/view','id' => $data->context_id]);
+                },
+                'filter' => Context::getContextList(),
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

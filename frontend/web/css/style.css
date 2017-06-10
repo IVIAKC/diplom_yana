@@ -475,3 +475,7 @@ body {
 .toggle i {
   font-size: 30px;
 }
+
+.my-wrapper{
+  padding:20px;
+}

@@ -46,7 +46,6 @@ AppAsset::register($this);
         $menuItems[] = ['label' => 'Аватарки', 'url' => ['avatar/']];
         $menuItems[] = ['label' => 'Проекты', 'url' => ['project/']];
         $menuItems[] = ['label' => 'Задачи', 'url' => ['issue/']];
-        $menuItems[] = ['label' => 'События', 'url' => ['action/']];
         $menuItems[] = ['label' => 'Файлы', 'url' => ['file-attachment/']];
         $menuItems[] = ['label' => 'Коментарии', 'url' => ['comment/']];
         $menuItems[] = ['label' => 'Типы', 'url' => ['type/']];

@@ -10,9 +10,6 @@ class m170605_155758_add_foreign_key extends Migration
         $this->addForeignKey('FK_project_status_id','project','status_id','status','id','cascade','cascade');
         $this->addForeignKey('FK_project_type_id','project','type_id','type','id','cascade','cascade');
 
-        $this->addForeignKey('FK_action_issue_id','action','issue_id','issue','id','cascade','cascade');
-        $this->addForeignKey('FK_action_author_id','action','author_id','user','id','cascade','cascade');
-
         $this->addForeignKey('FK_comment_author_id','comment','author_id','user','id','cascade','cascade');
 
         $this->addForeignKey('FK_issue_status_id','issue','status_id','status','id','cascade','cascade');
@@ -36,8 +33,6 @@ class m170605_155758_add_foreign_key extends Migration
 
     public function down()
     {
-        $this->dropForeignKey('FK_action_issue_id','action');
-        $this->dropForeignKey('FK_action_author_id','action');
 
         $this->dropForeignKey('FK_comment_author_id','comment');
 

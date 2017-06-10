@@ -2,183 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a72dd355-6223-463f-9d6a-5071690a9d84" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/ezyang/htmlpurifier/NEWS" afterPath="$PROJECT_DIR$/vendor/ezyang/htmlpurifier/NEWS" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/ezyang/htmlpurifier/VERSION" afterPath="$PROJECT_DIR$/vendor/ezyang/htmlpurifier/VERSION" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/ezyang/htmlpurifier/WHATSNEW" afterPath="$PROJECT_DIR$/vendor/ezyang/htmlpurifier/WHATSNEW" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/ezyang/htmlpurifier/library/HTMLPurifier.includes.php" afterPath="$PROJECT_DIR$/vendor/ezyang/htmlpurifier/library/HTMLPurifier.includes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/ezyang/htmlpurifier/library/HTMLPurifier.php" afterPath="$PROJECT_DIR$/vendor/ezyang/htmlpurifier/library/HTMLPurifier.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/ezyang/htmlpurifier/library/HTMLPurifier/ChildDef/List.php" afterPath="$PROJECT_DIR$/vendor/ezyang/htmlpurifier/library/HTMLPurifier/ChildDef/List.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/ezyang/htmlpurifier/library/HTMLPurifier/Config.php" afterPath="$PROJECT_DIR$/vendor/ezyang/htmlpurifier/library/HTMLPurifier/Config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/ezyang/htmlpurifier/library/HTMLPurifier/ConfigSchema.php" afterPath="$PROJECT_DIR$/vendor/ezyang/htmlpurifier/library/HTMLPurifier/ConfigSchema.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/ezyang/htmlpurifier/library/HTMLPurifier/Generator.php" afterPath="$PROJECT_DIR$/vendor/ezyang/htmlpurifier/library/HTMLPurifier/Generator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/ezyang/htmlpurifier/library/HTMLPurifier/Lexer.php" afterPath="$PROJECT_DIR$/vendor/ezyang/htmlpurifier/library/HTMLPurifier/Lexer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/extensions.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/extensions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/BaseYii.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/BaseYii.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/CHANGELOG.md" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/README.md" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/UPGRADE.md" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/UPGRADE.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/assets/yii.activeForm.js" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/assets/yii.activeForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/assets/yii.gridView.js" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/assets/yii.gridView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/assets/yii.js" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/assets/yii.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/Behavior.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/Behavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/Controller.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/ErrorHandler.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/ErrorHandler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/Event.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/Event.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/Model.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/Model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/Module.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/Module.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/Request.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/Request.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/Security.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/Security.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/Theme.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/Theme.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/View.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/View.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/Widget.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/base/Widget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/behaviors/AttributeBehavior.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/behaviors/AttributeBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/behaviors/SluggableBehavior.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/behaviors/SluggableBehavior.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/caching/Cache.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/caching/Cache.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/caching/DbCache.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/caching/DbCache.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/caching/FileCache.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/caching/FileCache.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/caching/FileDependency.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/caching/FileDependency.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/caching/MemCache.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/caching/MemCache.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/caching/MemCacheServer.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/caching/MemCacheServer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/captcha/CaptchaAction.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/captcha/CaptchaAction.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/classes.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/classes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/composer.json" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/console/Controller.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/console/Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/console/Request.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/console/Request.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/console/controllers/AssetController.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/console/controllers/AssetController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/console/controllers/CacheController.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/console/controllers/CacheController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/console/controllers/FixtureController.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/console/controllers/FixtureController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/console/controllers/MessageController.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/console/controllers/MessageController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/console/controllers/MigrateController.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/console/controllers/MigrateController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/console/controllers/ServeController.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/console/controllers/ServeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/data/ActiveDataProvider.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/data/ActiveDataProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/data/BaseDataProvider.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/data/BaseDataProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/data/DataProviderInterface.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/data/DataProviderInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/data/Sort.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/data/Sort.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/data/SqlDataProvider.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/data/SqlDataProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/ActiveQuery.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/ActiveQuery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/ActiveRecord.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/ActiveRecord.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/ActiveRecordInterface.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/ActiveRecordInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/BaseActiveRecord.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/BaseActiveRecord.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/Command.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/Command.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/Connection.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/Connection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/Migration.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/Migration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/Query.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/Query.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/QueryBuilder.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/QueryBuilder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/QueryInterface.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/QueryInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/QueryTrait.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/QueryTrait.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/Schema.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/Schema.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/cubrid/QueryBuilder.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/cubrid/QueryBuilder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/mssql/QueryBuilder.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/mssql/QueryBuilder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/mssql/Schema.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/mssql/Schema.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/mysql/QueryBuilder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/oci/QueryBuilder.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/oci/QueryBuilder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/oci/Schema.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/oci/Schema.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/pgsql/QueryBuilder.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/pgsql/QueryBuilder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/pgsql/Schema.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/pgsql/Schema.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/sqlite/QueryBuilder.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/db/sqlite/QueryBuilder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/di/Instance.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/di/Instance.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/di/ServiceLocator.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/di/ServiceLocator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/filters/AccessControl.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/filters/AccessControl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/filters/AccessRule.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/filters/AccessRule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/filters/RateLimiter.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/filters/RateLimiter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/grid/ActionColumn.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/grid/ActionColumn.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/grid/DataColumn.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/grid/DataColumn.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/grid/GridView.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/grid/GridView.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/helpers/BaseFileHelper.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/helpers/BaseFileHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/helpers/BaseHtml.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/helpers/BaseHtml.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/helpers/BaseInflector.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/helpers/BaseInflector.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/helpers/BaseStringHelper.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/helpers/BaseStringHelper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/helpers/BaseUrl.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/helpers/BaseUrl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/i18n/Formatter.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/i18n/Formatter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/i18n/I18N.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/i18n/I18N.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/log/DbTarget.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/log/DbTarget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/log/FileTarget.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/log/FileTarget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/log/Logger.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/log/Logger.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/mail/BaseMailer.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/mail/BaseMailer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/mail/MailerInterface.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/mail/MailerInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/bg/yii.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/bg/yii.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/da/yii.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/da/yii.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/et/yii.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/et/yii.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/fa/yii.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/fa/yii.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/fr/yii.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/fr/yii.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/hu/yii.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/hu/yii.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/ms/yii.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/ms/yii.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/pt-BR/yii.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/pt-BR/yii.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/sk/yii.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/sk/yii.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/sr-Latn/yii.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/sr-Latn/yii.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/tg/yii.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/tg/yii.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/uz/yii.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/messages/uz/yii.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/mutex/DbMutex.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/mutex/DbMutex.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/mutex/FileMutex.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/mutex/FileMutex.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/mutex/Mutex.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/mutex/Mutex.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/mutex/MysqlMutex.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/mutex/MysqlMutex.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/mutex/OracleMutex.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/mutex/OracleMutex.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/mutex/PgsqlMutex.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/mutex/PgsqlMutex.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/rbac/BaseManager.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/rbac/BaseManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/rbac/DbManager.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/rbac/DbManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/rbac/PhpManager.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/rbac/PhpManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/rbac/migrations/m140506_102106_rbac_init.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/rbac/migrations/m140506_102106_rbac_init.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/rbac/migrations/schema-oci.sql" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/rbac/migrations/schema-oci.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/requirements/YiiRequirementChecker.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/requirements/YiiRequirementChecker.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/requirements/requirements.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/requirements/requirements.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/rest/UrlRule.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/rest/UrlRule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/test/ActiveFixture.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/test/ActiveFixture.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/test/ArrayFixture.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/test/ArrayFixture.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/test/BaseActiveFixture.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/test/BaseActiveFixture.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/test/FixtureTrait.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/test/FixtureTrait.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/test/InitDbFixture.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/test/InitDbFixture.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/BooleanValidator.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/BooleanValidator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/CompareValidator.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/CompareValidator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/DateValidator.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/DateValidator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/EmailValidator.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/EmailValidator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/ExistValidator.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/ExistValidator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/FileValidator.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/FileValidator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/ImageValidator.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/ImageValidator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/IpValidator.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/IpValidator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/NumberValidator.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/NumberValidator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/RangeValidator.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/RangeValidator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/RegularExpressionValidator.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/RegularExpressionValidator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/RequiredValidator.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/RequiredValidator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/StringValidator.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/StringValidator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/UniqueValidator.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/UniqueValidator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/UrlValidator.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/UrlValidator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/Validator.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/validators/Validator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/views/errorHandler/exception.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/views/errorHandler/exception.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/views/migration.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/views/migration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/AssetConverter.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/AssetConverter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/AssetManager.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/AssetManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/CacheSession.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/CacheSession.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/CompositeUrlRule.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/CompositeUrlRule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/Controller.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/CookieCollection.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/CookieCollection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/DbSession.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/DbSession.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/ErrorAction.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/ErrorAction.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/ErrorHandler.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/ErrorHandler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/ForbiddenHttpException.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/ForbiddenHttpException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/GroupUrlRule.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/GroupUrlRule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/MultipartFormDataParser.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/MultipartFormDataParser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/Request.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/Request.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/Response.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/Response.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/Session.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/Session.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/UnauthorizedHttpException.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/UnauthorizedHttpException.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/UrlManager.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/UrlManager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/UrlRule.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/UrlRule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/View.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/View.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/XmlResponseFormatter.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/web/XmlResponseFormatter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/ActiveForm.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/ActiveForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/BaseListView.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/BaseListView.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/ContentDecorator.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/ContentDecorator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/DetailView.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/DetailView.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/FragmentCache.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/FragmentCache.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/LinkPager.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/LinkPager.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/Menu.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/Menu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/Pjax.php" afterPath="$PROJECT_DIR$/vendor/yiisoft/yii2/widgets/Pjax.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/console/migrations/m170610_170205_create_setting_table.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/console/migrations/m170509_071558_add_foreign_key.php" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/console/migrations/m170605_155358_create_linking_table.php" afterPath="$PROJECT_DIR$/console/migrations/m170605_155358_create_context_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/console/migrations/m170319_172039_alter_user_table.php" afterPath="$PROJECT_DIR$/console/migrations/m170319_172039_alter_user_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/console/migrations/m170509_071546_create_status_table.php" afterPath="$PROJECT_DIR$/console/migrations/m170509_071546_create_status_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/console/migrations/m170605_155758_add_foreign_key.php" afterPath="$PROJECT_DIR$/console/migrations/m170605_155758_add_foreign_key.php" />
     </list>
     <ignored path="diplom_yana.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -208,31 +38,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/environments/dev/frontend/web/index.php">
+      <file leaf-file-name="m170605_155758_add_foreign_key.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/console/migrations/m170605_155758_add_foreign_key.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+            <state relative-caret-position="829">
+              <caret line="60" column="67" lean-forward="false" selection-start-line="60" selection-start-column="67" selection-end-line="60" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="composer.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/composer.json">
+      <file leaf-file-name="m170319_170843_create_priority_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/console/migrations/m170319_170843_create_priority_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+            <state relative-caret-position="209">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vagrant-local.example.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vagrant/config/vagrant-local.example.yml">
+      <file leaf-file-name="m170605_155358_create_context_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/console/migrations/m170605_155358_create_context_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="16" column="53" lean-forward="false" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="m130524_201442_init.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/console/migrations/m130524_201442_init.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="m170509_071546_create_status_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/console/migrations/m170509_071546_create_status_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="18" column="70" lean-forward="false" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="m170605_153507_create_file_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/console/migrations/m170605_153507_create_file_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="m170319_170733_create_client_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/console/migrations/m170319_170733_create_client_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="14" column="38" lean-forward="false" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="m170319_164539_create_project_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/console/migrations/m170319_164539_create_project_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="24" column="43" lean-forward="false" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="m170319_172039_alter_user_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/console/migrations/m170319_172039_alter_user_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="m170319_172448_create_avatar_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/console/migrations/m170319_172448_create_avatar_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -267,12 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/backend/views/issue/create.php" />
-        <option value="$PROJECT_DIR$/backend/views/issue/update.php" />
-        <option value="$USER_HOME$/Рабочий стол/Безымянный документ.html" />
-        <option value="$PROJECT_DIR$/backend/controllers/FileAttachmentController.php" />
-        <option value="$PROJECT_DIR$/backend/views/file-attachment/index.php" />
-        <option value="$PROJECT_DIR$/backend/views/file-attachment/view.php" />
         <option value="$PROJECT_DIR$/common/models/extended/Priority.php" />
         <option value="$PROJECT_DIR$/common/models/extended/User.php" />
         <option value="$PROJECT_DIR$/common/models/extended/Client.php" />
@@ -293,7 +187,6 @@
         <option value="$PROJECT_DIR$/backend/views/avatar/update.php" />
         <option value="$PROJECT_DIR$/backend/views/avatar/_form.php" />
         <option value="$PROJECT_DIR$/common/models/extended/File.php" />
-        <option value="$PROJECT_DIR$/console/migrations/m170319_172448_create_avatar_table.php" />
         <option value="$PROJECT_DIR$/console/migrations/m170320_133726_add_foreign_key.php" />
         <option value="$PROJECT_DIR$/backend/controllers/AvatarController.php" />
         <option value="$PROJECT_DIR$/common/models/extended/Avatar.php" />
@@ -318,6 +211,13 @@
         <option value="$PROJECT_DIR$/backend/views/type/update.php" />
         <option value="$PROJECT_DIR$/backend/views/type/view.php" />
         <option value="$PROJECT_DIR$/backend/views/type/_form.php" />
+        <option value="$PROJECT_DIR$/console/migrations/m170319_172448_create_avatar_table.php" />
+        <option value="$PROJECT_DIR$/console/migrations/m170610_170205_create_setting_table.php" />
+        <option value="$PROJECT_DIR$/console/migrations/m170605_155758_add_foreign_key.php" />
+        <option value="$PROJECT_DIR$/console/migrations/m170605_155358_create_context_table.php" />
+        <option value="$PROJECT_DIR$/console/migrations/m170509_071546_create_status_table.php" />
+        <option value="$PROJECT_DIR$/console/migrations/m130524_201442_init.php" />
+        <option value="$PROJECT_DIR$/console/migrations/m170319_172039_alter_user_table.php" />
       </list>
     </option>
   </component>
@@ -364,6 +264,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="diplom" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diplom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diplom" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="console" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diplom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diplom" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="console" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -512,7 +444,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72366000" />
+    <option name="totallyTimeSpent" value="77017000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -526,14 +458,14 @@
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23161969" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23161969" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34759918" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34759918" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -604,126 +536,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/common/models/extended/Type.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="802">
-          <caret line="67" column="69" lean-forward="false" selection-start-line="67" selection-start-column="69" selection-end-line="67" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/project/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="47" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/controllers/ProjectController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="842">
-          <caret line="103" column="39" lean-forward="false" selection-start-line="103" selection-start-column="39" selection-end-line="103" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/project/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/client/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="29" column="17" lean-forward="false" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/priority/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/extended/FileAttachment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="708">
-          <caret line="102" column="73" lean-forward="false" selection-start-line="102" selection-start-column="73" selection-end-line="102" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/extended/Action.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="47" column="7" lean-forward="true" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/fixtures/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/issue/_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="92" column="24" lean-forward="true" selection-start-line="92" selection-start-column="24" selection-end-line="92" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/extended/Project.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="848">
-          <caret line="170" column="69" lean-forward="false" selection-start-line="170" selection-start-column="69" selection-end-line="170" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/web/UploadedFile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="162" column="38" lean-forward="false" selection-start-line="162" selection-start-column="38" selection-end-line="162" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/web/upload_file/hello.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_4.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="810" column="7" lean-forward="false" selection-start-line="810" selection-start-column="7" selection-end-line="810" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/config/params.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/config/params.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/console/migrations/m170509_071558_add_foreign_key.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/console/migrations/m170320_133726_add_foreign_key.php" />
     <entry file="file://$PROJECT_DIR$/common/models/extended/File.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -735,13 +547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
           <caret line="55" column="5" lean-forward="false" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/console/migrations/m170319_172448_create_avatar_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -952,6 +757,158 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="19" column="74" lean-forward="false" selection-start-line="19" selection-start-column="74" selection-end-line="19" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console/migrations/m170319_173920_create_comment_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/environments/dev/frontend/web/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console/migrations/m170509_071558_add_foreign_key.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="68" column="62" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="68" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console/migrations/m170509_071539_create_type_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vagrant/config/vagrant-local.example.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console/migrations/m170610_170205_create_setting_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="62" lean-forward="true" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console/migrations/m170319_172827_create_issue_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="20" column="58" lean-forward="false" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console/migrations/m170319_173856_create_file_attachment_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="70" lean-forward="true" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console/migrations/m170319_164539_create_project_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="24" column="43" lean-forward="false" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console/migrations/m170319_170733_create_client_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="38" lean-forward="false" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console/migrations/m170605_155758_add_foreign_key.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="829">
+          <caret line="60" column="67" lean-forward="false" selection-start-line="60" selection-start-column="67" selection-end-line="60" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console/migrations/m170319_172448_create_avatar_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console/migrations/m170319_170843_create_priority_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console/migrations/m170605_153507_create_file_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console/migrations/m170509_071546_create_status_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="70" lean-forward="false" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console/migrations/m170605_155358_create_context_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="16" column="53" lean-forward="false" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console/migrations/m130524_201442_init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console/migrations/m170319_172039_alter_user_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>

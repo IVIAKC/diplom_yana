@@ -49,10 +49,10 @@ class Priority extends \common\models\Priority
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'description' => 'Description',
-            'color' => 'Color',
-            'context_id' => 'Context ID',
+            'name' => 'Название',
+            'description' => 'Описание',
+            'color' => 'Цвет',
+            'context_id' => 'Окружение',
         ];
     }
 

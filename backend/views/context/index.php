@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\search\ContextSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Contexts';
+$this->title = 'Окружение';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="context-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Context', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать Окружение', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

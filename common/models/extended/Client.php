@@ -41,7 +41,7 @@ class Client extends \common\models\Client
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
+            'name' => 'Имя',
         ];
     }
 

@@ -45,10 +45,10 @@ class File extends \common\models\File
     {
         return [
             'id' => 'ID',
-            'filename' => 'Filename',
-            'extension' => 'Extension',
-            'size' => 'Size',
-            'alias' => 'Alias',
+            'filename' => 'Имя',
+            'extension' => 'Расширение',
+            'size' => 'Размер',
+            'alias' => 'Внутреннее имя',
         ];
     }
 }

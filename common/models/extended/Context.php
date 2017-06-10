@@ -45,8 +45,8 @@ class Context extends \common\models\Context
     {
         return [
             'id' => 'ID',
-            'alias' => 'Alias',
-            'name' => 'Name',
+            'alias' => 'Внутреннее имя',
+            'name' => 'Имя',
         ];
     }
 

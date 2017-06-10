@@ -47,11 +47,11 @@ class Comment extends \common\models\Comment
     {
         return [
             'id' => 'ID',
-            'author_id' => 'Author ID',
-            'description' => 'Description',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
-            'is_deleted' => 'Is Deleted',
+            'author_id' => 'Автор',
+            'description' => 'Содержимое',
+            'created_at' => 'Создан',
+            'updated_at' => 'Изменен',
+            'is_deleted' => 'Удален',
         ];
     }
 

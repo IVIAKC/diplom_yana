@@ -25,27 +25,27 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'type_id') ?>
 
-    <?php // echo $form->field($model, 'priority_id') ?>
+    <?php  echo $form->field($model, 'priority_id') ?>
 
-    <?php // echo $form->field($model, 'client_id') ?>
+    <?php  echo $form->field($model, 'client_id') ?>
 
-    <?php // echo $form->field($model, 'name') ?>
+    <?php  echo $form->field($model, 'name') ?>
 
-    <?php // echo $form->field($model, 'url') ?>
+    <?php  echo $form->field($model, 'url') ?>
 
-    <?php // echo $form->field($model, 'description') ?>
+    <?php  echo $form->field($model, 'description') ?>
 
-    <?php // echo $form->field($model, 'budget') ?>
+    <?php  echo $form->field($model, 'budget') ?>
 
-    <?php // echo $form->field($model, 'is_deleted') ?>
+    <?php  echo $form->field($model, 'is_deleted') ?>
 
-    <?php // echo $form->field($model, 'created_at') ?>
+    <?php  echo $form->field($model, 'created_at') ?>
 
-    <?php // echo $form->field($model, 'updated_at') ?>
+    <?php  echo $form->field($model, 'updated_at') ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>
+        <?= Html::submitButton('Найти', ['class' => 'btn btn-primary']) ?>
+        <?= Html::resetButton('Сбросить', ['class' => 'btn btn-default']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

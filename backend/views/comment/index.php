@@ -7,17 +7,13 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\search\CommentSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Comments';
+$this->title = 'Комментарии';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="comment-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
-        <?= Html::a('Create Comment', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -29,7 +25,16 @@ $this->params['breadcrumbs'][] = $this->title;
             'description:ntext',
             'created_at',
             'updated_at',
-            // 'is_deleted',
+            [
+                'attribute' => 'is_deleted',
+                'value' => function ($data){
+                    return $data->is_deleted ? 'Да' : 'Нет';
+                },
+                'filter' => [
+                    0 => 'Нет',
+                    1 => 'Да',
+                ],
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

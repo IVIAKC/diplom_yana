@@ -18,7 +18,7 @@ class IssueSearch extends Issue
     public function rules()
     {
         return [
-            [['id', 'sub_issue', 'priority_id', 'type_id', 'status_id', 'reporter_id', 'assignee_id', 'creater_id', 'project_id', 'is_deleted'], 'integer'],
+            [['id', 'parent_issue', 'priority_id', 'type_id', 'status_id', 'reporter_id', 'assignee_id', 'creater_id', 'project_id', 'is_deleted'], 'integer'],
             [['summary', 'description', 'created_at', 'updated_at', 'duedate', 'estimate'], 'safe'],
         ];
     }
@@ -60,7 +60,7 @@ class IssueSearch extends Issue
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'sub_issue' => $this->sub_issue,
+            'parent_issue' => $this->parent_issue,
             'priority_id' => $this->priority_id,
             'type_id' => $this->type_id,
             'status_id' => $this->status_id,

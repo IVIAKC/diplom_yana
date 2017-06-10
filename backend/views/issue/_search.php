@@ -17,7 +17,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'sub_issue') ?>
+    <?= $form->field($model, 'parent_issue') ?>
 
     <?= $form->field($model, 'priority_id') ?>
 
@@ -25,27 +25,27 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'status_id') ?>
 
-    <?php // echo $form->field($model, 'reporter_id') ?>
+    <?= $form->field($model, 'reporter_id') ?>
 
-    <?php // echo $form->field($model, 'assignee_id') ?>
+    <?= $form->field($model, 'assignee_id') ?>
 
-    <?php // echo $form->field($model, 'creater_id') ?>
+    <?= $form->field($model, 'creater_id') ?>
 
-    <?php // echo $form->field($model, 'project_id') ?>
+    <?= $form->field($model, 'project_id') ?>
 
-    <?php // echo $form->field($model, 'summary') ?>
+    <?= $form->field($model, 'summary') ?>
 
-    <?php // echo $form->field($model, 'description') ?>
+    <?= $form->field($model, 'description') ?>
 
-    <?php // echo $form->field($model, 'created_at') ?>
+    <?= $form->field($model, 'created_at') ?>
 
-    <?php // echo $form->field($model, 'updated_at') ?>
+    <?= $form->field($model, 'updated_at') ?>
 
-    <?php // echo $form->field($model, 'is_deleted') ?>
+    <?= $form->field($model, 'is_deleted') ?>
 
-    <?php // echo $form->field($model, 'duedate') ?>
+    <?= $form->field($model, 'duedate') ?>
 
-    <?php // echo $form->field($model, 'estimate') ?>
+    <?= $form->field($model, 'estimate') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

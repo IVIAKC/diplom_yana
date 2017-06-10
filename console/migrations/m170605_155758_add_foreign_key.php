@@ -13,7 +13,7 @@ class m170605_155758_add_foreign_key extends Migration
         $this->addForeignKey('FK_comment_author_id','comment','author_id','user','id','cascade','cascade');
 
         $this->addForeignKey('FK_issue_status_id','issue','status_id','status','id','cascade','cascade');
-        $this->addForeignKey('FK_issue_sub_issue_id','issue','sub_issue','issue','id','cascade','cascade');
+        $this->addForeignKey('FK_issue_parent_issue_id','issue','parent_issue','issue','id','cascade','cascade');
         $this->addForeignKey('FK_issue_priority_id','issue','priority_id','priority','id','cascade','cascade');
         $this->addForeignKey('FK_issue_reporter_id','issue','reporter_id','user','id','cascade','cascade');
         $this->addForeignKey('FK_issue_assignee_id','issue','assignee_id','user','id','cascade','cascade');
@@ -40,7 +40,7 @@ class m170605_155758_add_foreign_key extends Migration
         $this->dropForeignKey('FK_comment_author_id','comment');
 
         $this->dropForeignKey('FK_issue_status_id','issue');
-        $this->dropForeignKey('FK_issue_sub_issue_id','issue');
+        $this->dropForeignKey('FK_issue_parent_issue_id','issue');
         $this->dropForeignKey('FK_issue_priority_id','issue');
         $this->dropForeignKey('FK_issue_reporter_id','issue');
         $this->dropForeignKey('FK_issue_assignee_id','issue');

@@ -45,11 +45,11 @@ class Setting extends \common\models\Setting
     {
         return [
             'id' => 'ID',
-            'is_editable' => 'Is Editable',
-            'is_list' => 'Is List',
-            'alias' => 'Alias',
-            'name' => 'Name',
-            'value' => 'Value',
+            'is_editable' => 'Изменяемый',
+            'is_list' => 'Список',
+            'alias' => 'Внутреннее имя',
+            'name' => 'Имя',
+            'value' => 'Значение',
         ];
     }
 }

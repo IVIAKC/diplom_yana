@@ -14,7 +14,7 @@ class m170319_172827_create_issue_table extends Migration
     {
         $this->createTable('issue', [
             'id' => $this->primaryKey(11)->unsigned(),
-            'sub_issue' => $this->integer(11)->unsigned()->defaultValue(null),
+            'parent_issue' => $this->integer(11)->unsigned()->defaultValue(null),
             'priority_id' => $this->integer(11)->unsigned()->notNull(),
             'type_id' => $this->integer(11)->unsigned()->notNull(),
             'status_id' => $this->integer(11)->unsigned()->notNull(),

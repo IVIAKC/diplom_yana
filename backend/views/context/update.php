@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\extended\Context */
 
-$this->title = 'Update Context: ' . $model->name;
+$this->title = 'Изменить Окружение: ' . $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Contexts', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'Изменить';
 ?>
 <div class="context-update">
 

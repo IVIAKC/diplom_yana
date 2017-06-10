@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\extended\Context */
 
-$this->title = 'Create Context';
-$this->params['breadcrumbs'][] = ['label' => 'Contexts', 'url' => ['index']];
+$this->title = 'Создать Окружение';
+$this->params['breadcrumbs'][] = ['label' => 'Окружение', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="context-create">

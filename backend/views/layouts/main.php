@@ -42,6 +42,12 @@ AppAsset::register($this);
     } else {
 
         $menuItems[] = ['label' => 'Аватарки', 'url' => ['avatar/']];
+        $menuItems[] = ['label' => 'Клиенты', 'url' => ['client/']];
+        $menuItems[] = ['label' => 'Комментарии', 'url' => ['comment/']];
+        $menuItems[] = ['label' => 'Окружение', 'url' => ['context/']];
+        $menuItems[] = ['label' => 'Задачи', 'url' => ['issue/']];
+        $menuItems[] = ['label' => 'Приоритеты', 'url' => ['priority/']];
+        $menuItems[] = ['label' => 'Настройки', 'url' => ['setting/']];
 
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')

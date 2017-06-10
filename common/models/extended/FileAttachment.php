@@ -39,8 +39,8 @@ class FileAttachment extends \common\models\FileAttachment
     {
         return [
             'id' => 'ID',
-            'context_id' => 'Context ID',
-            'file_id' => 'File ID',
+            'context_id' => 'Окружение',
+            'file_id' => 'Файл',
         ];
     }
 }

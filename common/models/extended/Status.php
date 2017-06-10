@@ -47,9 +47,9 @@ class Status extends \common\models\Status
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'description' => 'Description',
-            'context_id' => 'Context ID',
+            'name' => 'Название',
+            'description' => 'Описание',
+            'context_id' => 'Окружение',
         ];
     }
 

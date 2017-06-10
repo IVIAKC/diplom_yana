@@ -68,19 +68,19 @@ class Project extends \common\models\Project
     {
         return [
             'id' => 'ID',
-            'avatar_id' => 'Avatar ID',
-            'lead_id' => 'Lead ID',
-            'status_id' => 'Status ID',
-            'type_id' => 'Type ID',
-            'priority_id' => 'Priority ID',
-            'client_id' => 'Client ID',
-            'name' => 'Name',
+            'avatar_id' => 'Аватарка',
+            'lead_id' => 'Ответственный',
+            'status_id' => 'Статус',
+            'type_id' => 'Тип',
+            'priority_id' => 'Приоритет',
+            'client_id' => 'Клиент',
+            'name' => 'Название',
             'url' => 'Url',
-            'description' => 'Description',
-            'budget' => 'Budget',
-            'is_deleted' => 'Is Deleted',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'description' => 'Описание',
+            'budget' => 'Бюджет',
+            'is_deleted' => 'Удален',
+            'created_at' => 'Создан',
+            'updated_at' => 'Изменен',
         ];
     }
 

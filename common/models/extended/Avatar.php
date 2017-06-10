@@ -42,8 +42,8 @@ class Avatar extends \common\models\Avatar
     {
         return [
             'id' => 'ID',
-            'file_id' => 'File ID',
-            'is_system' => 'Is System',
+            'file_id' => 'Файл',
+            'is_system' => 'Системный',
         ];
     }
 }

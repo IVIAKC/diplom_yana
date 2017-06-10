@@ -1,43 +1,54 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: iviakc
- * Date: 03.06.17
- * Time: 22:08
- */
 
 namespace common\models\extended;
 
-
 use Yii;
-use yii\base\Model;
-use yii\web\UploadedFile;
 
-class File extends Model
+/**
+ * This is the model class for table "file".
+ *
+ * @property integer $id
+ * @property string $filename
+ * @property string $extension
+ * @property integer $size
+ * @property string $alias
+ */
+class File extends \yii\db\ActiveRecord
 {
     /**
-     * @var UploadedFile
+     * @inheritdoc
      */
-    public $file;
+    public static function tableName()
+    {
+        return 'file';
+    }
 
+    /**
+     * @inheritdoc
+     */
     public function rules()
     {
         return [
-            [['file'], 'file'],
+            [['filename', 'extension', 'size', 'alias'], 'required'],
+            [['size'], 'integer'],
+            [['filename'], 'string', 'max' => 50],
+            [['extension'], 'string', 'max' => 5],
+            [['alias'], 'string', 'max' => 32],
+            [['alias'], 'unique'],
         ];
     }
 
-    public function upload()
+    /**
+     * @inheritdoc
+     */
+    public function attributeLabels()
     {
-        if($this->validate()) {
-            $this->file->saveAs(Yii::getAlias('@frontend') . Yii::$app->params['file_href'] . $this->file->baseName . '.' . $this->file->extension);
-            return true;
-        }else{
-            return $this->getErrors();
-        }
-    }
-
-    public function getFullName(){
-        return $this->file->baseName . $this->file->extension;
+        return [
+            'id' => 'ID',
+            'filename' => 'Filename',
+            'extension' => 'Extension',
+            'size' => 'Size',
+            'alias' => 'Alias',
+        ];
     }
 }

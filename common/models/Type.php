@@ -10,9 +10,10 @@ use Yii;
  * @property integer $id
  * @property string $name
  * @property string $description
+ * @property integer $context_id
  *
- * @property Issue[] $issues
  * @property Project[] $projects
+ * @property Context $context
  */
 class Type extends \yii\db\ActiveRecord
 {
@@ -30,9 +31,11 @@ class Type extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name'], 'required'],
+            [['name', 'context_id'], 'required'],
+            [['context_id'], 'integer'],
             [['name', 'description'], 'string', 'max' => 255],
             [['name'], 'unique'],
+            [['context_id'], 'exist', 'skipOnError' => true, 'targetClass' => Context::className(), 'targetAttribute' => ['context_id' => 'id']],
         ];
     }
 
@@ -45,15 +48,8 @@ class Type extends \yii\db\ActiveRecord
             'id' => 'ID',
             'name' => 'Name',
             'description' => 'Description',
+            'context_id' => 'Context ID',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getIssues()
-    {
-        return $this->hasMany(Issue::className(), ['type_id' => 'id']);
     }
 
     /**
@@ -62,5 +58,13 @@ class Type extends \yii\db\ActiveRecord
     public function getProjects()
     {
         return $this->hasMany(Project::className(), ['type_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getContext()
+    {
+        return $this->hasOne(Context::className(), ['id' => 'context_id']);
     }
 }

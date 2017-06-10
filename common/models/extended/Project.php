@@ -3,9 +3,6 @@
 namespace common\models\extended;
 
 use Yii;
-use yii\behaviors\TimestampBehavior;
-use yii\db\ActiveRecord;
-use yii\db\Expression;
 
 /**
  * This is the model class for table "project".
@@ -25,7 +22,6 @@ use yii\db\Expression;
  * @property string $created_at
  * @property string $updated_at
  *
- * @property FileAttachment[] $fileAttachments
  * @property Issue[] $issues
  * @property Avatar $avatar
  * @property Client $client
@@ -34,23 +30,8 @@ use yii\db\Expression;
  * @property Status $status
  * @property Type $type
  */
-class Project extends \common\models\Project
+class Project extends \yii\db\ActiveRecord
 {
-
-    public function behaviors()
-    {
-        return [
-            'timestamp' => [
-                'class' => TimestampBehavior::className(),
-                'attributes' => [
-                    ActiveRecord::EVENT_BEFORE_INSERT => ['created_at', 'updated_at'],
-                    ActiveRecord::EVENT_BEFORE_UPDATE => 'updated_at',
-                ],
-                'value' => new Expression('NOW()'),
-            ],
-        ];
-    }
-
     /**
      * @inheritdoc
      */
@@ -87,28 +68,20 @@ class Project extends \common\models\Project
     {
         return [
             'id' => 'ID',
-            'avatar_id' => 'Аватарка',
-            'lead_id' => 'Ответственный',
-            'status_id' => 'Статус',
-            'type_id' => 'Тип',
-            'priority_id' => 'Приоритет',
-            'client_id' => 'Клиент',
-            'name' => 'Имя',
+            'avatar_id' => 'Avatar ID',
+            'lead_id' => 'Lead ID',
+            'status_id' => 'Status ID',
+            'type_id' => 'Type ID',
+            'priority_id' => 'Priority ID',
+            'client_id' => 'Client ID',
+            'name' => 'Name',
             'url' => 'Url',
-            'description' => 'Описание',
-            'budget' => 'Бюджет',
-            'is_deleted' => 'Удален',
-            'created_at' => 'Создан Время',
-            'updated_at' => 'Изменен Время',
+            'description' => 'Description',
+            'budget' => 'Budget',
+            'is_deleted' => 'Is Deleted',
+            'created_at' => 'Created At',
+            'updated_at' => 'Updated At',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getFileAttachments()
-    {
-        return $this->hasMany(FileAttachment::className(), ['project_id' => 'id']);
     }
 
     /**
@@ -165,9 +138,5 @@ class Project extends \common\models\Project
     public function getType()
     {
         return $this->hasOne(Type::className(), ['id' => 'type_id']);
-    }
-
-    public static function getProjectList(){
-        return self::find()->select('name')->indexBy('id')->column();
     }
 }

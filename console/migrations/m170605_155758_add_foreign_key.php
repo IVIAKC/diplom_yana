@@ -29,6 +29,9 @@ class m170605_155758_add_foreign_key extends Migration
         $this->addForeignKey('FK_priority_context_id','priority','context_id','context','id','cascade','cascade');
         $this->addForeignKey('FK_type_context_id','type','context_id','context','id','cascade','cascade');
         $this->addForeignKey('FK_status_context_id','status','context_id','context','id','cascade','cascade');
+
+        $this->addForeignKey('FK_user_avatar_id','user','avatar_id','avatar','id','cascade','cascade');
+
     }
 
     public function down()
@@ -51,7 +54,7 @@ class m170605_155758_add_foreign_key extends Migration
         $this->dropForeignKey('FK_project_status_id','project');
         $this->dropForeignKey('FK_project_type_id','project');
 
-
+        $this->dropForeignKey('FK_user_avatar_id','user');
 
         $this->dropForeignKey('FK_priority_context_id','priority');
         $this->dropForeignKey('FK_type_context_id','type');

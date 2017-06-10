@@ -12,7 +12,7 @@ use Yii;
  *
  * @property Project[] $projects
  */
-class Client extends \common\models\Client
+class Client extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -40,11 +40,16 @@ class Client extends \common\models\Client
     public function attributeLabels()
     {
         return [
-            'name' => 'Имя',
+            'id' => 'ID',
+            'name' => 'Name',
         ];
     }
 
-    public static function getClientList(){
-        return self::find()->select('name')->indexBy('id')->column();
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getProjects()
+    {
+        return $this->hasMany(Project::className(), ['client_id' => 'id']);
     }
 }

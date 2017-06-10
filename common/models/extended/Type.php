@@ -10,11 +10,12 @@ use Yii;
  * @property integer $id
  * @property string $name
  * @property string $description
+ * @property integer $context_id
  *
- * @property Issue[] $issues
  * @property Project[] $projects
+ * @property Context $context
  */
-class Type extends \common\models\Type
+class Type extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -30,9 +31,11 @@ class Type extends \common\models\Type
     public function rules()
     {
         return [
-            [['name'], 'required'],
+            [['name', 'context_id'], 'required'],
+            [['context_id'], 'integer'],
             [['name', 'description'], 'string', 'max' => 255],
             [['name'], 'unique'],
+            [['context_id'], 'exist', 'skipOnError' => true, 'targetClass' => Context::className(), 'targetAttribute' => ['context_id' => 'id']],
         ];
     }
 
@@ -43,17 +46,10 @@ class Type extends \common\models\Type
     {
         return [
             'id' => 'ID',
-            'name' => 'Имя',
-            'description' => 'Описание',
+            'name' => 'Name',
+            'description' => 'Description',
+            'context_id' => 'Context ID',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getIssues()
-    {
-        return $this->hasMany(Issue::className(), ['type_id' => 'id']);
     }
 
     /**
@@ -64,7 +60,11 @@ class Type extends \common\models\Type
         return $this->hasMany(Project::className(), ['type_id' => 'id']);
     }
 
-    public static function getTypeList(){
-        return self::find()->select('name')->indexBy('id')->column();
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getContext()
+    {
+        return $this->hasOne(Context::className(), ['id' => 'context_id']);
     }
 }

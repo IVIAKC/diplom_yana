@@ -24,8 +24,6 @@ use Yii;
  * @property string $duedate
  * @property string $estimate
  *
- * @property Action[] $actions
- * @property FileAttachment[] $fileAttachments
  * @property User $assignee
  * @property User $creater
  * @property Priority $priority
@@ -34,7 +32,6 @@ use Yii;
  * @property Status $status
  * @property Issue $subIssue
  * @property Issue[] $issues
- * @property Type $type
  */
 class Issue extends \yii\db\ActiveRecord
 {
@@ -64,7 +61,6 @@ class Issue extends \yii\db\ActiveRecord
             [['reporter_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['reporter_id' => 'id']],
             [['status_id'], 'exist', 'skipOnError' => true, 'targetClass' => Status::className(), 'targetAttribute' => ['status_id' => 'id']],
             [['sub_issue'], 'exist', 'skipOnError' => true, 'targetClass' => Issue::className(), 'targetAttribute' => ['sub_issue' => 'id']],
-            [['type_id'], 'exist', 'skipOnError' => true, 'targetClass' => Type::className(), 'targetAttribute' => ['type_id' => 'id']],
         ];
     }
 
@@ -91,22 +87,6 @@ class Issue extends \yii\db\ActiveRecord
             'duedate' => 'Duedate',
             'estimate' => 'Estimate',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getActions()
-    {
-        return $this->hasMany(Action::className(), ['issue_id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getFileAttachments()
-    {
-        return $this->hasMany(FileAttachment::className(), ['issue_id' => 'id']);
     }
 
     /**
@@ -171,13 +151,5 @@ class Issue extends \yii\db\ActiveRecord
     public function getIssues()
     {
         return $this->hasMany(Issue::className(), ['sub_issue' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getType()
-    {
-        return $this->hasOne(Type::className(), ['id' => 'type_id']);
     }
 }

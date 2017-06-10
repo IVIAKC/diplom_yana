@@ -24,8 +24,6 @@ use Yii;
  * @property string $duedate
  * @property string $estimate
  *
- * @property Action[] $actions
- * @property FileAttachment[] $fileAttachments
  * @property User $assignee
  * @property User $creater
  * @property Priority $priority
@@ -34,9 +32,8 @@ use Yii;
  * @property Status $status
  * @property Issue $subIssue
  * @property Issue[] $issues
- * @property Type $type
  */
-class Issue extends \common\models\Issue
+class Issue extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -64,7 +61,6 @@ class Issue extends \common\models\Issue
             [['reporter_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['reporter_id' => 'id']],
             [['status_id'], 'exist', 'skipOnError' => true, 'targetClass' => Status::className(), 'targetAttribute' => ['status_id' => 'id']],
             [['sub_issue'], 'exist', 'skipOnError' => true, 'targetClass' => Issue::className(), 'targetAttribute' => ['sub_issue' => 'id']],
-            [['type_id'], 'exist', 'skipOnError' => true, 'targetClass' => Type::className(), 'targetAttribute' => ['type_id' => 'id']],
         ];
     }
 
@@ -75,38 +71,22 @@ class Issue extends \common\models\Issue
     {
         return [
             'id' => 'ID',
-            'sub_issue' => 'Под задача',
-            'priority_id' => 'Приоритет',
-            'type_id' => 'Тип',
-            'status_id' => 'Статус',
-            'reporter_id' => 'Проверяющий',
-            'assignee_id' => 'Ответственный',
-            'creater_id' => 'Создатель',
-            'project_id' => 'Проект',
-            'summary' => 'Заголовок',
-            'description' => 'Описание',
-            'created_at' => 'Создан Время',
-            'updated_at' => 'Изменен Время',
-            'is_deleted' => 'Удален',
-            'duedate' => 'Ограничено время',
-            'estimate' => 'Оцененное время',
+            'sub_issue' => 'Sub Issue',
+            'priority_id' => 'Priority ID',
+            'type_id' => 'Type ID',
+            'status_id' => 'Status ID',
+            'reporter_id' => 'Reporter ID',
+            'assignee_id' => 'Assignee ID',
+            'creater_id' => 'Creater ID',
+            'project_id' => 'Project ID',
+            'summary' => 'Summary',
+            'description' => 'Description',
+            'created_at' => 'Created At',
+            'updated_at' => 'Updated At',
+            'is_deleted' => 'Is Deleted',
+            'duedate' => 'Duedate',
+            'estimate' => 'Estimate',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getActions()
-    {
-        return $this->hasMany(Action::className(), ['issue_id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getFileAttachments()
-    {
-        return $this->hasMany(FileAttachment::className(), ['issue_id' => 'id']);
     }
 
     /**
@@ -171,17 +151,5 @@ class Issue extends \common\models\Issue
     public function getIssues()
     {
         return $this->hasMany(Issue::className(), ['sub_issue' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getType()
-    {
-        return $this->hasOne(Type::className(), ['id' => 'type_id']);
-    }
-
-    public static function getIssueList(){
-        return self::find()->select('summary')->indexBy('id')->column();
     }
 }

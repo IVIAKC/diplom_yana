@@ -22,7 +22,6 @@ use Yii;
  * @property string $created_at
  * @property string $updated_at
  *
- * @property FileAttachment[] $fileAttachments
  * @property Issue[] $issues
  * @property Avatar $avatar
  * @property Client $client
@@ -83,14 +82,6 @@ class Project extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getFileAttachments()
-    {
-        return $this->hasMany(FileAttachment::className(), ['project_id' => 'id']);
     }
 
     /**

@@ -8,18 +8,13 @@ use Yii;
  * This is the model class for table "avatar".
  *
  * @property integer $id
- * @property string $filename
- * @property string $content_type
- * @property integer $owner_id
- * @property string $avatar_type
+ * @property integer $file_id
  * @property integer $is_system
  *
- * @property User $owner
- * @property IssueType[] $issueTypes
  * @property Project[] $projects
- * @property ProjectType[] $projectTypes
+ * @property User[] $users
  */
-class Avatar extends \common\models\Avatar
+class Avatar extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -35,10 +30,8 @@ class Avatar extends \common\models\Avatar
     public function rules()
     {
         return [
-            [['filename', 'content_type'], 'required'],
-            [['is_system'], 'integer'],
-            [['filename', 'content_type'], 'string', 'max' => 255],
-            [['filename'], 'unique'],
+            [['file_id'], 'required'],
+            [['file_id', 'is_system'], 'integer'],
         ];
     }
 
@@ -49,17 +42,24 @@ class Avatar extends \common\models\Avatar
     {
         return [
             'id' => 'ID',
-            'filename' => 'Имя файла',
-            'content_type' => 'Тип файла',
-            'is_system' => 'Системный',
+            'file_id' => 'File ID',
+            'is_system' => 'Is System',
         ];
     }
 
     /**
-     * @return array
+     * @return \yii\db\ActiveQuery
      */
+    public function getProjects()
+    {
+        return $this->hasMany(Project::className(), ['avatar_id' => 'id']);
+    }
 
-    public static function getAvatarList(){
-        return self::find()->select('filename')->indexBy('id')->column();
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUsers()
+    {
+        return $this->hasMany(User::className(), ['avatar_id' => 'id']);
     }
 }

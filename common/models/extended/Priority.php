@@ -10,13 +10,14 @@ use Yii;
  * @property integer $id
  * @property string $name
  * @property string $description
- * @property string $icon_url
  * @property string $color
+ * @property integer $context_id
  *
  * @property Issue[] $issues
+ * @property Context $context
  * @property Project[] $projects
  */
-class Priority extends \common\models\Priority
+class Priority extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -32,10 +33,12 @@ class Priority extends \common\models\Priority
     public function rules()
     {
         return [
-            [['name'], 'required'],
+            [['name', 'context_id'], 'required'],
             [['description'], 'string'],
-            [['name', 'icon_url', 'color'], 'string', 'max' => 255],
+            [['context_id'], 'integer'],
+            [['name', 'color'], 'string', 'max' => 255],
             [['name'], 'unique'],
+            [['context_id'], 'exist', 'skipOnError' => true, 'targetClass' => Context::className(), 'targetAttribute' => ['context_id' => 'id']],
         ];
     }
 
@@ -46,10 +49,10 @@ class Priority extends \common\models\Priority
     {
         return [
             'id' => 'ID',
-            'name' => 'Название',
-            'description' => 'Описание',
-            'icon_url' => 'Икон Url',
-            'color' => 'Цвет',
+            'name' => 'Name',
+            'description' => 'Description',
+            'color' => 'Color',
+            'context_id' => 'Context ID',
         ];
     }
 
@@ -64,12 +67,16 @@ class Priority extends \common\models\Priority
     /**
      * @return \yii\db\ActiveQuery
      */
+    public function getContext()
+    {
+        return $this->hasOne(Context::className(), ['id' => 'context_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
     public function getProjects()
     {
         return $this->hasMany(Project::className(), ['priority_id' => 'id']);
-    }
-
-    public static function getPriorityList(){
-        return self::find()->select('name')->indexBy('id')->column();
     }
 }

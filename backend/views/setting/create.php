@@ -4,13 +4,13 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model common\models\extended\Action */
+/* @var $model common\models\extended\Setting */
 
-$this->title = 'Create Action';
-$this->params['breadcrumbs'][] = ['label' => 'Actions', 'url' => ['index']];
+$this->title = 'Create Setting';
+$this->params['breadcrumbs'][] = ['label' => 'Settings', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="action-create">
+<div class="setting-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

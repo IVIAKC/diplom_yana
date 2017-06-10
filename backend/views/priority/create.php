@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\extended\Priority */
 
-$this->title = 'Создать Приоритет';
-$this->params['breadcrumbs'][] = ['label' => 'Приоритеты', 'url' => ['index']];
+$this->title = 'Create Priority';
+$this->params['breadcrumbs'][] = ['label' => 'Priorities', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="priority-create">

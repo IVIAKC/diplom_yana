@@ -2,14 +2,13 @@
 
 namespace backend\controllers;
 
-use common\models\extended\File;
 use Yii;
 use common\models\extended\Avatar;
-use yii\data\ActiveDataProvider;
+use common\models\search\AvatarSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\web\UploadedFile;
+
 /**
  * AvatarController implements the CRUD actions for Avatar model.
  */
@@ -36,11 +35,11 @@ class AvatarController extends Controller
      */
     public function actionIndex()
     {
-        $dataProvider = new ActiveDataProvider([
-            'query' => Avatar::find(),
-        ]);
+        $searchModel = new AvatarSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
+            'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
@@ -65,23 +64,12 @@ class AvatarController extends Controller
     public function actionCreate()
     {
         $model = new Avatar();
-        $fileModel = new File();
-        if ($model->load(Yii::$app->request->post())) {
-            $fileModel->file = UploadedFile::getInstance($fileModel, 'file');
-            $model->filename = $fileModel->file->baseName;
-            $model->content_type = $fileModel->file->extension;
-            if($fileModel->upload()) {
-                if(!$model->save()){
-                    return var_dump($model->getErrors());
-                }
-                return $this->redirect(['view', 'id' => $model->id]);
-            }else{
-                return $fileModel->upload();
-            }
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
-                'fileModel' => $fileModel,
             ]);
         }
     }

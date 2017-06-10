@@ -4,7 +4,7 @@ namespace backend\controllers;
 
 use Yii;
 use common\models\extended\Type;
-use yii\data\ActiveDataProvider;
+use common\models\search\TypeSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -35,11 +35,11 @@ class TypeController extends Controller
      */
     public function actionIndex()
     {
-        $dataProvider = new ActiveDataProvider([
-            'query' => Type::find(),
-        ]);
+        $searchModel = new TypeSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
+            'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }

@@ -4,7 +4,7 @@ namespace backend\controllers;
 
 use Yii;
 use common\models\extended\Priority;
-use yii\data\ActiveDataProvider;
+use common\models\search\PrioritySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -35,11 +35,11 @@ class PriorityController extends Controller
      */
     public function actionIndex()
     {
-        $dataProvider = new ActiveDataProvider([
-            'query' => Priority::find(),
-        ]);
+        $searchModel = new PrioritySearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
+            'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }

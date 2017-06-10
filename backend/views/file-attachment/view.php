@@ -13,7 +13,9 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="file-attachment-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
+
     <p>
+        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
@@ -27,14 +29,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'issue_id',
-            'project_id',
-            'comment_id',
-            'author_id',
-            'filename',
-            'file_size',
-            'url:url',
-            'created_at',
+            'context_id',
+            'file_id',
         ],
     ]) ?>
 

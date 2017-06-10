@@ -19,7 +19,7 @@ class ProjectSearch extends Project
     {
         return [
             [['id', 'avatar_id', 'lead_id', 'status_id', 'type_id', 'priority_id', 'client_id', 'is_deleted'], 'integer'],
-            [['name', 'url', 'description', 'duedate', 'created_at', 'updated_at'], 'safe'],
+            [['name', 'url', 'description', 'created_at', 'updated_at'], 'safe'],
             [['budget'], 'number'],
         ];
     }
@@ -69,7 +69,6 @@ class ProjectSearch extends Project
             'client_id' => $this->client_id,
             'budget' => $this->budget,
             'is_deleted' => $this->is_deleted,
-            'duedate' => $this->duedate,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ]);

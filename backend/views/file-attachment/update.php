@@ -3,14 +3,14 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\extended\Action */
+/* @var $model common\models\extended\FileAttachment */
 
-$this->title = 'Update Action: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Actions', 'url' => ['index']];
+$this->title = 'Update File Attachment: ' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'File Attachments', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="action-update">
+<div class="file-attachment-update">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

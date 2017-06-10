@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\extended\Priority */
 
-$this->title = 'Изменить Приоритеты: ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Приоритеты', 'url' => ['index']];
+$this->title = 'Update Priority: ' . $model->name;
+$this->params['breadcrumbs'][] = ['label' => 'Priorities', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Изменить';
+$this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="priority-update">
 

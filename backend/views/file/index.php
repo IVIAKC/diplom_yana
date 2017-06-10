@@ -4,29 +4,31 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
+/* @var $searchModel common\models\search\FileSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Actions';
+$this->title = 'Files';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="action-index">
+<div class="file-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Action', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create File', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'issue_id',
-            'author_id',
-            'action_type',
-            'action_body:ntext',
-            // 'created_at',
+            'filename',
+            'extension',
+            'size',
+            'alias',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

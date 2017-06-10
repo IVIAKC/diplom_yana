@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\extended\Issue */
 
-$this->title = 'Создать Задачу';
-$this->params['breadcrumbs'][] = ['label' => 'Задачи', 'url' => ['index']];
+$this->title = 'Create Issue';
+$this->params['breadcrumbs'][] = ['label' => 'Issues', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="issue-create">

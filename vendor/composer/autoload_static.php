@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitbac93912ee68e459eff66fe86794cf45
+class ComposerStaticInitcea8cd81433a0a10507528bef39762e8
 {
     public static $files = array (
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
@@ -120,9 +120,9 @@ class ComposerStaticInitbac93912ee68e459eff66fe86794cf45
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitbac93912ee68e459eff66fe86794cf45::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitbac93912ee68e459eff66fe86794cf45::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitbac93912ee68e459eff66fe86794cf45::$prefixesPsr0;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitcea8cd81433a0a10507528bef39762e8::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitcea8cd81433a0a10507528bef39762e8::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitcea8cd81433a0a10507528bef39762e8::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

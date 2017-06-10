@@ -4,7 +4,7 @@ namespace backend\controllers;
 
 use Yii;
 use common\models\extended\Project;
-use yii\data\ActiveDataProvider;
+use common\models\search\ProjectSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -35,11 +35,11 @@ class ProjectController extends Controller
      */
     public function actionIndex()
     {
-        $dataProvider = new ActiveDataProvider([
-            'query' => Project::find(),
-        ]);
+        $searchModel = new ProjectSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
+            'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
@@ -101,9 +101,7 @@ class ProjectController extends Controller
      */
     public function actionDelete($id)
     {
-        $model = $this->findModel($id);
-        $model->is_deleted = 1;
-        $model->save();
+        $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }

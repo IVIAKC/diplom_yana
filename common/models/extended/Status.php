@@ -10,9 +10,11 @@ use Yii;
  * @property integer $id
  * @property string $name
  * @property string $description
+ * @property integer $context_id
  *
  * @property Issue[] $issues
  * @property Project[] $projects
+ * @property Context $context
  */
 class Status extends \common\models\Status
 {
@@ -30,9 +32,11 @@ class Status extends \common\models\Status
     public function rules()
     {
         return [
-            [['name'], 'required'],
+            [['name', 'context_id'], 'required'],
+            [['context_id'], 'integer'],
             [['name', 'description'], 'string', 'max' => 255],
             [['name'], 'unique'],
+            [['context_id'], 'exist', 'skipOnError' => true, 'targetClass' => Context::className(), 'targetAttribute' => ['context_id' => 'id']],
         ];
     }
 
@@ -43,29 +47,13 @@ class Status extends \common\models\Status
     {
         return [
             'id' => 'ID',
-            'name' => 'Имя',
+            'name' => 'Название',
             'description' => 'Описание',
+            'context_id' => 'Окружение',
         ];
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getIssues()
-    {
-        return $this->hasMany(Issue::className(), ['status_id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getProjects()
-    {
-        return $this->hasMany(Project::className(), ['status_id' => 'id']);
-    }
-
     public static function getStatusList(){
-        return self::find()->select('name')->indexBy('id')->column();
-
+        return self::find()->select('name')->orderBy('name')->indexBy('id')->column();
     }
 }

@@ -40,11 +40,12 @@ class Client extends \common\models\Client
     public function attributeLabels()
     {
         return [
+            'id' => 'ID',
             'name' => 'Имя',
         ];
     }
 
     public static function getClientList(){
-        return self::find()->select('name')->indexBy('id')->column();
+        return self::find()->select('name')->orderBy('name')->indexBy('id')->column();
     }
 }

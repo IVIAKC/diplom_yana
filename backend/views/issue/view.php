@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model common\models\extended\Issue */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Изменить', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Задачи', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="issue-view">
@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'sub_issue',
+            'parent_issue',
             'priority_id',
             'type_id',
             'status_id',

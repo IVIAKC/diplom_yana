@@ -16,6 +16,7 @@ class m170509_071539_create_type_table extends Migration
             'id' => $this->primaryKey(11)->unsigned(),
             'name' => $this->string(255)->notNull()->unique(),
             'description' => $this->string(),
+            'context_id' => $this->integer(11)->unsigned()->notNull(),
         ]);
     }
 

@@ -8,16 +8,11 @@ use Yii;
  * This is the model class for table "avatar".
  *
  * @property integer $id
- * @property string $filename
- * @property string $content_type
- * @property integer $owner_id
- * @property string $avatar_type
+ * @property integer $file_id
  * @property integer $is_system
  *
- * @property User $owner
- * @property IssueType[] $issueTypes
  * @property Project[] $projects
- * @property ProjectType[] $projectTypes
+ * @property User[] $users
  */
 class Avatar extends \yii\db\ActiveRecord
 {
@@ -35,11 +30,8 @@ class Avatar extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['filename', 'content_type'], 'required'],
-            [['owner_id', 'is_system'], 'integer'],
-            [['filename', 'content_type', 'avatar_type'], 'string', 'max' => 255],
-            [['filename'], 'unique'],
-            [['owner_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['owner_id' => 'id']],
+            [['file_id'], 'required'],
+            [['file_id', 'is_system'], 'integer'],
         ];
     }
 
@@ -50,28 +42,9 @@ class Avatar extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'filename' => 'Filename',
-            'content_type' => 'Content Type',
-            'owner_id' => 'Owner ID',
-            'avatar_type' => 'Avatar Type',
+            'file_id' => 'File ID',
             'is_system' => 'Is System',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getOwner()
-    {
-        return $this->hasOne(User::className(), ['id' => 'owner_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getIssueTypes()
-    {
-        return $this->hasMany(IssueType::className(), ['avatar_id' => 'id']);
     }
 
     /**
@@ -85,8 +58,8 @@ class Avatar extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getProjectTypes()
+    public function getUsers()
     {
-        return $this->hasMany(ProjectType::className(), ['avatar_id' => 'id']);
+        return $this->hasMany(User::className(), ['avatar_id' => 'id']);
     }
 }

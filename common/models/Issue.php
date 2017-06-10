@@ -8,7 +8,7 @@ use Yii;
  * This is the model class for table "issue".
  *
  * @property integer $id
- * @property integer $sub_issue
+ * @property integer $parent_issue
  * @property integer $priority_id
  * @property integer $type_id
  * @property integer $status_id
@@ -24,8 +24,6 @@ use Yii;
  * @property string $duedate
  * @property string $estimate
  *
- * @property Action[] $actions
- * @property FileAttachment[] $fileAttachments
  * @property User $assignee
  * @property User $creater
  * @property Priority $priority
@@ -34,7 +32,6 @@ use Yii;
  * @property Status $status
  * @property Issue $subIssue
  * @property Issue[] $issues
- * @property Type $type
  */
 class Issue extends \yii\db\ActiveRecord
 {
@@ -52,7 +49,7 @@ class Issue extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['sub_issue', 'priority_id', 'type_id', 'status_id', 'reporter_id', 'assignee_id', 'creater_id', 'project_id', 'is_deleted'], 'integer'],
+            [['parent_issue', 'priority_id', 'type_id', 'status_id', 'reporter_id', 'assignee_id', 'creater_id', 'project_id', 'is_deleted'], 'integer'],
             [['priority_id', 'type_id', 'status_id', 'creater_id', 'project_id'], 'required'],
             [['description'], 'string'],
             [['created_at', 'updated_at', 'duedate', 'estimate'], 'safe'],
@@ -63,8 +60,7 @@ class Issue extends \yii\db\ActiveRecord
             [['project_id'], 'exist', 'skipOnError' => true, 'targetClass' => Project::className(), 'targetAttribute' => ['project_id' => 'id']],
             [['reporter_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['reporter_id' => 'id']],
             [['status_id'], 'exist', 'skipOnError' => true, 'targetClass' => Status::className(), 'targetAttribute' => ['status_id' => 'id']],
-            [['sub_issue'], 'exist', 'skipOnError' => true, 'targetClass' => Issue::className(), 'targetAttribute' => ['sub_issue' => 'id']],
-            [['type_id'], 'exist', 'skipOnError' => true, 'targetClass' => Type::className(), 'targetAttribute' => ['type_id' => 'id']],
+            [['parent_issue'], 'exist', 'skipOnError' => true, 'targetClass' => Issue::className(), 'targetAttribute' => ['parent_issue' => 'id']],
         ];
     }
 
@@ -75,7 +71,7 @@ class Issue extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'sub_issue' => 'Sub Issue',
+            'parent_issue' => 'Sub Issue',
             'priority_id' => 'Priority ID',
             'type_id' => 'Type ID',
             'status_id' => 'Status ID',
@@ -91,22 +87,6 @@ class Issue extends \yii\db\ActiveRecord
             'duedate' => 'Duedate',
             'estimate' => 'Estimate',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getActions()
-    {
-        return $this->hasMany(Action::className(), ['issue_id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getFileAttachments()
-    {
-        return $this->hasMany(FileAttachment::className(), ['issue_id' => 'id']);
     }
 
     /**
@@ -162,7 +142,7 @@ class Issue extends \yii\db\ActiveRecord
      */
     public function getSubIssue()
     {
-        return $this->hasOne(Issue::className(), ['id' => 'sub_issue']);
+        return $this->hasOne(Issue::className(), ['id' => 'parent_issue']);
     }
 
     /**
@@ -170,14 +150,6 @@ class Issue extends \yii\db\ActiveRecord
      */
     public function getIssues()
     {
-        return $this->hasMany(Issue::className(), ['sub_issue' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getType()
-    {
-        return $this->hasOne(Type::className(), ['id' => 'type_id']);
+        return $this->hasMany(Issue::className(), ['parent_issue' => 'id']);
     }
 }

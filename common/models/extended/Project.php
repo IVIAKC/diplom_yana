@@ -3,9 +3,6 @@
 namespace common\models\extended;
 
 use Yii;
-use yii\behaviors\TimestampBehavior;
-use yii\db\ActiveRecord;
-use yii\db\Expression;
 
 /**
  * This is the model class for table "project".
@@ -25,7 +22,6 @@ use yii\db\Expression;
  * @property string $created_at
  * @property string $updated_at
  *
- * @property FileAttachment[] $fileAttachments
  * @property Issue[] $issues
  * @property Avatar $avatar
  * @property Client $client
@@ -36,21 +32,6 @@ use yii\db\Expression;
  */
 class Project extends \common\models\Project
 {
-
-    public function behaviors()
-    {
-        return [
-            'timestamp' => [
-                'class' => TimestampBehavior::className(),
-                'attributes' => [
-                    ActiveRecord::EVENT_BEFORE_INSERT => ['created_at', 'updated_at'],
-                    ActiveRecord::EVENT_BEFORE_UPDATE => 'updated_at',
-                ],
-                'value' => new Expression('NOW()'),
-            ],
-        ];
-    }
-
     /**
      * @inheritdoc
      */
@@ -93,81 +74,17 @@ class Project extends \common\models\Project
             'type_id' => 'Тип',
             'priority_id' => 'Приоритет',
             'client_id' => 'Клиент',
-            'name' => 'Имя',
+            'name' => 'Название',
             'url' => 'Url',
             'description' => 'Описание',
             'budget' => 'Бюджет',
             'is_deleted' => 'Удален',
-            'created_at' => 'Создан Время',
-            'updated_at' => 'Изменен Время',
+            'created_at' => 'Создан',
+            'updated_at' => 'Изменен',
         ];
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getFileAttachments()
-    {
-        return $this->hasMany(FileAttachment::className(), ['project_id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getIssues()
-    {
-        return $this->hasMany(Issue::className(), ['project_id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getAvatar()
-    {
-        return $this->hasOne(Avatar::className(), ['id' => 'avatar_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getClient()
-    {
-        return $this->hasOne(Client::className(), ['id' => 'client_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getLead()
-    {
-        return $this->hasOne(User::className(), ['id' => 'lead_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getPriority()
-    {
-        return $this->hasOne(Priority::className(), ['id' => 'priority_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getStatus()
-    {
-        return $this->hasOne(Status::className(), ['id' => 'status_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getType()
-    {
-        return $this->hasOne(Type::className(), ['id' => 'type_id']);
-    }
-
     public static function getProjectList(){
-        return self::find()->select('name')->indexBy('id')->column();
+        return self::find()->select('name')->orderBy('name')->indexBy('id')->column();
     }
 }

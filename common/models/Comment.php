@@ -12,11 +12,9 @@ use Yii;
  * @property string $description
  * @property string $created_at
  * @property string $updated_at
- * @property string $deleted_at
  * @property integer $is_deleted
  *
  * @property User $author
- * @property FileAttachment[] $fileAttachments
  */
 class Comment extends \yii\db\ActiveRecord
 {
@@ -37,7 +35,7 @@ class Comment extends \yii\db\ActiveRecord
             [['author_id'], 'required'],
             [['author_id', 'is_deleted'], 'integer'],
             [['description'], 'string'],
-            [['created_at', 'updated_at', 'deleted_at'], 'safe'],
+            [['created_at', 'updated_at'], 'safe'],
             [['author_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['author_id' => 'id']],
         ];
     }
@@ -53,7 +51,6 @@ class Comment extends \yii\db\ActiveRecord
             'description' => 'Description',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
-            'deleted_at' => 'Deleted At',
             'is_deleted' => 'Is Deleted',
         ];
     }
@@ -64,13 +61,5 @@ class Comment extends \yii\db\ActiveRecord
     public function getAuthor()
     {
         return $this->hasOne(User::className(), ['id' => 'author_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getFileAttachments()
-    {
-        return $this->hasMany(FileAttachment::className(), ['comment_id' => 'id']);
     }
 }

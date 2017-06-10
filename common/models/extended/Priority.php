@@ -10,10 +10,11 @@ use Yii;
  * @property integer $id
  * @property string $name
  * @property string $description
- * @property string $icon_url
  * @property string $color
+ * @property integer $context_id
  *
  * @property Issue[] $issues
+ * @property Context $context
  * @property Project[] $projects
  */
 class Priority extends \common\models\Priority
@@ -32,10 +33,12 @@ class Priority extends \common\models\Priority
     public function rules()
     {
         return [
-            [['name'], 'required'],
+            [['name', 'context_id'], 'required'],
             [['description'], 'string'],
-            [['name', 'icon_url', 'color'], 'string', 'max' => 255],
+            [['context_id'], 'integer'],
+            [['name', 'color'], 'string', 'max' => 255],
             [['name'], 'unique'],
+            [['context_id'], 'exist', 'skipOnError' => true, 'targetClass' => Context::className(), 'targetAttribute' => ['context_id' => 'id']],
         ];
     }
 
@@ -48,28 +51,17 @@ class Priority extends \common\models\Priority
             'id' => 'ID',
             'name' => 'Название',
             'description' => 'Описание',
-            'icon_url' => 'Икон Url',
             'color' => 'Цвет',
+            'context_id' => 'Окружение',
         ];
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getIssues()
-    {
-        return $this->hasMany(Issue::className(), ['priority_id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getProjects()
-    {
-        return $this->hasMany(Project::className(), ['priority_id' => 'id']);
-    }
-
     public static function getPriorityList(){
-        return self::find()->select('name')->indexBy('id')->column();
+        return self::find()->select('name')->orderBy('name')->indexBy('id')->column();
     }
+
+    public function getColorView(){
+        return "<div style='width: 100%; height: 20px; background: $this->color'></div>";
+    }
+
 }

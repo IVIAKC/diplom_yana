@@ -5,7 +5,6 @@ use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\extended\Avatar */
-/* @var $fileModel common\models\extended\File */
 
 $this->title = 'Создать Аватарку';
 $this->params['breadcrumbs'][] = ['label' => 'Аватарки', 'url' => ['index']];
@@ -17,8 +16,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $this->render('_form', [
         'model' => $model,
-        'fileModel' => $fileModel,
-
     ]) ?>
 
 </div>

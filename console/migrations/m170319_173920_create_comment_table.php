@@ -18,7 +18,6 @@ class m170319_173920_create_comment_table extends Migration
             'description' => $this->text(),
             'created_at' => $this->timestamp().' DEFAULT NOW()',
             'updated_at' => $this->timestamp()->defaultValue(null),
-            'deleted_at' => $this->timestamp()->defaultValue(null),
             'is_deleted' => $this->boolean()->defaultValue(false),
 
         ]);

@@ -12,8 +12,9 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="project-view">
 
-    <h1><?= Html::encode($this->title) ?>
-        <div style="float: right">
+    <h1><?= Html::encode($this->title) ?></h1>
+
+    <p>
         <?= Html::a('Изменить', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Удалить', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
@@ -22,9 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
-        </div>
-    </h1>
-
+    </p>
 
     <?= DetailView::widget([
         'model' => $model,
@@ -40,12 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'url:url',
             'description:ntext',
             'budget',
-            [
-                'attribute' => 'is_deleted',
-                'value' => function ($data){
-                    return $data->is_deleted ? 'Да' : 'Нет';
-                }
-            ],
+            'is_deleted',
             'created_at',
             'updated_at',
         ],

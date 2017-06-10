@@ -31,14 +31,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'name',
             'description:ntext',
-            'icon_url:url',
-            [
-                'attribute' => 'color',
-                'format' => 'html',
-                'value' => function ($data) {
-                    return $data->getColorView();
-                },
-            ]
+            'color',
+            'context_id',
         ],
     ]) ?>
 

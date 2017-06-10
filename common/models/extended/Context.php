@@ -15,7 +15,7 @@ use Yii;
  * @property Status[] $statuses
  * @property Type[] $types
  */
-class Context extends \yii\db\ActiveRecord
+class Context extends \common\models\Context
 {
     /**
      * @inheritdoc
@@ -50,27 +50,4 @@ class Context extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getPriorities()
-    {
-        return $this->hasMany(Priority::className(), ['context_id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getStatuses()
-    {
-        return $this->hasMany(Status::className(), ['context_id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getTypes()
-    {
-        return $this->hasMany(Type::className(), ['context_id' => 'id']);
-    }
 }

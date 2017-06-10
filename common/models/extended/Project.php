@@ -30,7 +30,7 @@ use Yii;
  * @property Status $status
  * @property Type $type
  */
-class Project extends \yii\db\ActiveRecord
+class Project extends \common\models\Project
 {
     /**
      * @inheritdoc
@@ -84,59 +84,5 @@ class Project extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getIssues()
-    {
-        return $this->hasMany(Issue::className(), ['project_id' => 'id']);
-    }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getAvatar()
-    {
-        return $this->hasOne(Avatar::className(), ['id' => 'avatar_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getClient()
-    {
-        return $this->hasOne(Client::className(), ['id' => 'client_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getLead()
-    {
-        return $this->hasOne(User::className(), ['id' => 'lead_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getPriority()
-    {
-        return $this->hasOne(Priority::className(), ['id' => 'priority_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getStatus()
-    {
-        return $this->hasOne(Status::className(), ['id' => 'status_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getType()
-    {
-        return $this->hasOne(Type::className(), ['id' => 'type_id']);
-    }
 }

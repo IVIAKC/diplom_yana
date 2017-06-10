@@ -11,7 +11,7 @@ use Yii;
  * @property integer $context_id
  * @property integer $file_id
  */
-class FileAttachment extends \yii\db\ActiveRecord
+class FileAttachment extends \common\models\FileAttachment
 {
     /**
      * @inheritdoc

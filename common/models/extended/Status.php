@@ -16,7 +16,7 @@ use Yii;
  * @property Project[] $projects
  * @property Context $context
  */
-class Status extends \yii\db\ActiveRecord
+class Status extends \common\models\Status
 {
     /**
      * @inheritdoc
@@ -53,27 +53,4 @@ class Status extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getIssues()
-    {
-        return $this->hasMany(Issue::className(), ['status_id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getProjects()
-    {
-        return $this->hasMany(Project::className(), ['status_id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getContext()
-    {
-        return $this->hasOne(Context::className(), ['id' => 'context_id']);
-    }
 }

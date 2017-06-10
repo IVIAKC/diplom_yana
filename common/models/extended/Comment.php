@@ -16,7 +16,7 @@ use Yii;
  *
  * @property User $author
  */
-class Comment extends \yii\db\ActiveRecord
+class Comment extends \common\models\Comment
 {
     /**
      * @inheritdoc
@@ -55,11 +55,5 @@ class Comment extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getAuthor()
-    {
-        return $this->hasOne(User::className(), ['id' => 'author_id']);
-    }
+
 }

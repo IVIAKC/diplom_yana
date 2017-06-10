@@ -14,7 +14,7 @@ use Yii;
  * @property Project[] $projects
  * @property User[] $users
  */
-class Avatar extends \yii\db\ActiveRecord
+class Avatar extends \common\models\Avatar
 {
     /**
      * @inheritdoc
@@ -45,21 +45,5 @@ class Avatar extends \yii\db\ActiveRecord
             'file_id' => 'File ID',
             'is_system' => 'Is System',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getProjects()
-    {
-        return $this->hasMany(Project::className(), ['avatar_id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getUsers()
-    {
-        return $this->hasMany(User::className(), ['avatar_id' => 'id']);
     }
 }

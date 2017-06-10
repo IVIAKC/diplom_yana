@@ -15,7 +15,7 @@ use Yii;
  * @property Project[] $projects
  * @property Context $context
  */
-class Type extends \yii\db\ActiveRecord
+class Type extends \common\models\Type
 {
     /**
      * @inheritdoc
@@ -52,19 +52,4 @@ class Type extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getProjects()
-    {
-        return $this->hasMany(Project::className(), ['type_id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getContext()
-    {
-        return $this->hasOne(Context::className(), ['id' => 'context_id']);
-    }
 }

@@ -13,7 +13,7 @@ use Yii;
  * @property integer $size
  * @property string $alias
  */
-class File extends \yii\db\ActiveRecord
+class File extends \common\models\File
 {
     /**
      * @inheritdoc

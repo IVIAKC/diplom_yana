@@ -14,7 +14,7 @@ use Yii;
  * @property string $name
  * @property string $value
  */
-class Setting extends \yii\db\ActiveRecord
+class Setting extends \common\models\Setting
 {
     /**
      * @inheritdoc

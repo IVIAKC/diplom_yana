@@ -17,7 +17,7 @@ use Yii;
  * @property Context $context
  * @property Project[] $projects
  */
-class Priority extends \yii\db\ActiveRecord
+class Priority extends \common\models\Priority
 {
     /**
      * @inheritdoc
@@ -56,27 +56,5 @@ class Priority extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getIssues()
-    {
-        return $this->hasMany(Issue::className(), ['priority_id' => 'id']);
-    }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getContext()
-    {
-        return $this->hasOne(Context::className(), ['id' => 'context_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getProjects()
-    {
-        return $this->hasMany(Project::className(), ['priority_id' => 'id']);
-    }
 }

@@ -12,7 +12,7 @@ use Yii;
  *
  * @property Project[] $projects
  */
-class Client extends \yii\db\ActiveRecord
+class Client extends \common\models\Client
 {
     /**
      * @inheritdoc
@@ -45,11 +45,4 @@ class Client extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getProjects()
-    {
-        return $this->hasMany(Project::className(), ['client_id' => 'id']);
-    }
 }

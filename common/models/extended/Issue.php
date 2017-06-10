@@ -33,7 +33,7 @@ use Yii;
  * @property Issue $subIssue
  * @property Issue[] $issues
  */
-class Issue extends \yii\db\ActiveRecord
+class Issue extends \common\models\Issue
 {
     /**
      * @inheritdoc
@@ -89,67 +89,4 @@ class Issue extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getAssignee()
-    {
-        return $this->hasOne(User::className(), ['id' => 'assignee_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getCreater()
-    {
-        return $this->hasOne(User::className(), ['id' => 'creater_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getPriority()
-    {
-        return $this->hasOne(Priority::className(), ['id' => 'priority_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getProject()
-    {
-        return $this->hasOne(Project::className(), ['id' => 'project_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getReporter()
-    {
-        return $this->hasOne(User::className(), ['id' => 'reporter_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getStatus()
-    {
-        return $this->hasOne(Status::className(), ['id' => 'status_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getSubIssue()
-    {
-        return $this->hasOne(Issue::className(), ['id' => 'sub_issue']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getIssues()
-    {
-        return $this->hasMany(Issue::className(), ['sub_issue' => 'id']);
-    }
 }

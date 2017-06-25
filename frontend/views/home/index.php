@@ -1,3 +1,5 @@
+<?php use common\models\extended\Issue; ?>
+
 <div class="col-md-6 col-sm-6 col-xs-12">
     <div class="x_panel tile fixed_height_320">
         <div class="x_title">
@@ -5,35 +7,30 @@
             <div class="clearfix"></div>
         </div>
         <div class="x_content">
-<!--            Все задачи-->
+            <!--            Все задачи-->
             <table class="table">
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Username</th>
+                    <th>Название</th>
+                    <th>Приоритет</th>
+                    <th>Тип</th>
+                    <th>Статус</th>
+                    <th>Ответственный</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
+                <?php $i = 0 ;foreach (Issue::getAllArray() as $issue): $i++;
+                    ?>
+                    <tr>
+                        <th scope="row"><?= $i ?></th>
+                        <td><?= $issue->summary ?></td>
+                        <td width="25px"><?= $issue->priority->getColorView() ?></td>
+                        <td><?= $issue->type->name ?></td>
+                        <td><?= $issue->status->name ?></td>
+                        <td><?= $issue->assignee->username ?></td>
+                    </tr>
+                <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
@@ -47,7 +44,7 @@
             <div class="clearfix"></div>
         </div>
         <div class="x_content">
-            
+
 
         </div>
     </div>

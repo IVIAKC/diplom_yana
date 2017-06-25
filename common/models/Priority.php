@@ -79,4 +79,9 @@ class Priority extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Project::className(), ['priority_id' => 'id']);
     }
+
+
+    public function getColorView(){
+        return "<div style='width: 100%; height: 20px; background: $this->color'></div>";
+    }
 }

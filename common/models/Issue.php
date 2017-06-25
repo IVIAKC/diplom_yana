@@ -155,6 +155,6 @@ class Issue extends \yii\db\ActiveRecord
 
     public function getType()
     {
-        return $this->hasMany(Type::className(), ['type_id' => 'id']);
+        return $this->hasOne(Type::className(), ['id' => 'type_id']);
     }
 }

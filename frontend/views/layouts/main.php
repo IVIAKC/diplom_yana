@@ -41,6 +41,7 @@ AppAsset::register($this);
                             <ul class="nav child_menu" style="display: none;">
                                 <li><a href="/issue/index?type=<?= Issue::TYPE_SOMEONE ?>">Мои зачади</a></li>
                                 <li><a href="/issue/index">Все зачади</a></li>
+                                <li><a href="/issue/create">Создать задачу</a></li>
                             </ul>
                         </li>
                         <li><a><i class="fa fa-folder"></i> Проекты <span class="fa fa-chevron-down"></span></a>
@@ -52,6 +53,8 @@ AppAsset::register($this);
                         <li><a><i class="fa fa-folder"></i> Статистика <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu" style="display: none;">
                                 <li><a href="/statistics/type">По типу</a></li>
+                                <li><a href="/statistics/users">По пользователям</a></li>
+                                <li><a href="/statistics/status">По статусам</a></li>
                             </ul>
                         </li>
                     </ul>

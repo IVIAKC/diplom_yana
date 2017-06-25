@@ -28,21 +28,61 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
-            'parent_issue',
-            'priority_id',
-            'type_id',
-            'status_id',
-            'reporter_id',
-            'assignee_id',
-            'creater_id',
-            'project_id',
             'summary',
             'description:ntext',
-            'created_at',
-            'updated_at',
-            'is_deleted',
-            'duedate',
+            [
+                'attribute' => 'priority_id',
+                'format' => 'html',
+                'value' => function($data){
+                    return $data->priority->getColorView();
+                }
+            ],
+            [
+                'attribute' => 'type_id',
+                'format' => 'html',
+                'value' => function($data){
+                    return $data->type->name;
+                }
+            ],
+            [
+                'attribute' => 'status_id',
+                'format' => 'html',
+                'value' => function($data){
+                    return $data->status->name;
+                }
+            ],
+            [
+                'attribute' => 'reporter_id',
+                'format' => 'html',
+                'value' => function($data){
+                    return $data->reporter->username;
+                }
+            ],
+            [
+                'attribute' => 'assignee_id',
+                'format' => 'html',
+                'value' => function($data){
+                    return $data->assignee->username;
+                }
+            ],
+            [
+                'attribute' => 'creater_id',
+                'format' => 'html',
+                'value' => function($data){
+                    return $data->creater->username;
+                }
+            ],
+            [
+                'attribute' => 'project_id',
+                'format' => 'html',
+                'value' => function($data){
+                    return $data->project->name;
+                }
+            ],
+
+            'created_at:date',
+            'updated_at:date',
+            'duedate:date',
         ],
     ]) ?>
 

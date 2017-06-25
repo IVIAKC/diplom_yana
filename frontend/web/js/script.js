@@ -59,9 +59,9 @@ $(function () {
 
 /** ******  /left menu  *********************** **/
 /** ******  right_col height flexible  *********************** **/
-$(".right_col").css("min-height", $(window).height());
+$(".right_col").css("min-height", $(window).height()*3);
 $(window).resize(function () {
-    $(".right_col").css("min-height", $(window).height());
+    $(".right_col").css("min-height", $(window).height()*3);
 });
 /** ******  /right_col height flexible  *********************** **/
 

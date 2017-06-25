@@ -21,14 +21,36 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'lead_id',
-            'status_id',
-            'type_id',
-            'priority_id',
             'name',
             'url:url',
             'description:ntext',
-            'is_deleted',
+            [
+                'attribute' => 'lead_id',
+                'value' => function ($data){
+                    return $data->lead->username;
+                }
+            ],
+            [
+                'attribute' => 'priority_id',
+                'format' => 'html',
+                'value' => function($data){
+                    return $data->priority->getColorView();
+                }
+            ],
+            [
+                'attribute' => 'type_id',
+                'format' => 'html',
+                'value' => function($data){
+                    return $data->type->name;
+                }
+            ],
+            [
+                'attribute' => 'status_id',
+                'format' => 'html',
+                'value' => function($data){
+                    return $data->status->name;
+                }
+            ],
         ],
     ]) ?>
 

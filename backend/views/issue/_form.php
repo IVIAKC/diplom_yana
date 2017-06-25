@@ -104,7 +104,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'duedate')->textInput() ?>
 
-    <?= $form->field($model, 'estimate')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Создать' : 'Изменить', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

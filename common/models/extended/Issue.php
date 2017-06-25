@@ -97,12 +97,22 @@ class Issue extends \common\models\Issue
     public static function getIssueList(){
         return self::find()->select('summary')->orderBy('summary')->indexBy('id')->column();
     }
-    public static function getAllArray($type = self::TYPE_ALL, $user_id = null){
+    public static function getAllArray($type = self::TYPE_ALL){
         if($type == self::TYPE_ALL)
             return self::find()->all();
+        //TODO Вынести в отдельный класс дочерний для Issue, Project
         if($type == self::TYPE_SOMEONE)
-            if(empty($user_id))
-                throw new NotFoundHttpException();
-            return self::find()->where([])->all();
+//            if(empty($user_id))
+//                throw new NotFoundHttpException();
+            return self::find()
+                ->orWhere(['assignee_id' => Yii::$app->user->id])
+                ->orWhere(['created_at' => Yii::$app->user->id])
+                ->orWhere(['reporter_id' => Yii::$app->user->id])
+                ->all();
+    }
+
+    public static function getAllForType(){
+
+        return self::find()->select('COUNT(*)')->innerJoin('type','issue.type_id=type.id')->groupBy(['type_id','type.name'])->indexBy('name')->column();
     }
 }

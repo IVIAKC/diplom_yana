@@ -3,6 +3,7 @@
 namespace common\models\extended;
 
 use Yii;
+use yii\web\NotFoundHttpException;
 
 /**
  * This is the model class for table "project".
@@ -32,6 +33,9 @@ use Yii;
  */
 class Project extends \common\models\Project
 {
+    const TYPE_ALL = 0;
+    const TYPE_SOMEONE = 1;
+
     /**
      * @inheritdoc
      */
@@ -86,5 +90,15 @@ class Project extends \common\models\Project
 
     public static function getProjectList(){
         return self::find()->select('name')->orderBy('name')->indexBy('id')->column();
+    }
+
+    public static function getAllArray($type = self::TYPE_ALL, $user_id = null){
+        if($type == self::TYPE_ALL)
+            return self::find()->andWhere(['!=','status_id',3])->limit(10)->all();
+        if($type == self::TYPE_SOMEONE) {
+//            if (empty($user_id))
+//                throw new NotFoundHttpException();
+            return self::find()->limit(10)->all();
+        }
     }
 }

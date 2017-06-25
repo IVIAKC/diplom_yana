@@ -15,6 +15,7 @@ class ComposerStaticInitcea8cd81433a0a10507528bef39762e8
     public static $prefixLengthsPsr4 = array (
         'y' => 
         array (
+            'yiier\\chartjs\\' => 14,
             'yii\\swiftmailer\\' => 16,
             'yii\\gii\\' => 8,
             'yii\\faker\\' => 10,
@@ -42,6 +43,10 @@ class ComposerStaticInitcea8cd81433a0a10507528bef39762e8
     );
 
     public static $prefixDirsPsr4 = array (
+        'yiier\\chartjs\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yiier/yii2-chartjs-widget',
+        ),
         'yii\\swiftmailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-swiftmailer',

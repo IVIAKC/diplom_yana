@@ -5,6 +5,7 @@ namespace frontend\controllers;
 use common\models\search\ProjectSearch;
 use Yii;
 use common\models\extended\Project;
+use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -33,13 +34,22 @@ class ProjectController extends Controller
      * Lists all Project models.
      * @return mixed
      */
-    public function actionIndex()
+    public function actionIndex($type = null)
     {
-        $searchModel = new ProjectSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $query = Project::find();
 
+        if($type == Project::TYPE_SOMEONE)
+            $query->where(['lead_id' => Yii::$app->user->id]);
+
+        // add conditions that should always apply here
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => [
+                'pageSize' => 15
+            ]
+        ]);
         return $this->render('index', [
-            'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
@@ -58,5 +68,12 @@ class ProjectController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+    public function actionView($id)
+    {
+        return $this->render('view', [
+            'model' => $this->findModel($id),
+        ]);
     }
 }

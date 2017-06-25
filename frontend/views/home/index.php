@@ -1,6 +1,11 @@
-<?php use common\models\extended\Issue; ?>
+<?php use common\models\extended\Issue;
+use common\models\extended\Project;
+use yiier\chartjs\ChartJs;
 
-<div class="col-md-6 col-sm-6 col-xs-12">
+\frontend\assets\AppAsset::register($this);
+?>
+
+<div class="col-md-12 col-sm-12 col-xs-12">
     <div class="x_panel tile fixed_height_320">
         <div class="x_title">
             <h2>Задачи</h2>
@@ -17,18 +22,20 @@
                     <th>Тип</th>
                     <th>Статус</th>
                     <th>Ответственный</th>
+                    <th>День выполнения</th>
                 </tr>
                 </thead>
                 <tbody>
-                <?php $i = 0 ;foreach (Issue::getAllArray() as $issue): $i++;
+                <?php $i = 0 ;foreach (Issue::getAllArray(Issue::TYPE_SOMEONE,Yii::$app->user->id) as $item): $i++;
                     ?>
                     <tr>
                         <th scope="row"><?= $i ?></th>
-                        <td><?= $issue->summary ?></td>
-                        <td width="25px"><?= $issue->priority->getColorView() ?></td>
-                        <td><?= $issue->type->name ?></td>
-                        <td><?= $issue->status->name ?></td>
-                        <td><?= $issue->assignee->username ?></td>
+                        <td><?= $item->summary ?></td>
+                        <td width="25px"><?= $item->priority->getColorView() ?></td>
+                        <td><?= $item->type->name ?></td>
+                        <td><?= $item->status->name ?></td>
+                        <td><?= $item->assignee->username ?></td>
+                        <td><?= !empty($item->duedate) ?date('Y-m-d',strtotime($item->duedate)) : ''?></td>
                     </tr>
                 <?php endforeach; ?>
                 </tbody>
@@ -44,7 +51,31 @@
             <div class="clearfix"></div>
         </div>
         <div class="x_content">
-
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Название</th>
+                    <th>Приоритет</th>
+                    <th>Тип</th>
+                    <th>Статус</th>
+                    <th>Ответственный</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php $i = 0 ;foreach (Project::getAllArray(Project::TYPE_SOMEONE,Yii::$app->user->id) as $item): $i++;
+                    ?>
+                    <tr>
+                        <th scope="row"><?= $i ?></th>
+                        <td><?= $item->name ?></td>
+                        <td width="25px"><?= $item->priority->getColorView() ?></td>
+                        <td><?= !empty($item->type)?$item->type->name :''?></td>
+                        <td><?= $item->status->name ?></td>
+                        <td><?= $item->lead->username ?></td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
 
         </div>
     </div>
@@ -57,101 +88,26 @@
             <div class="clearfix"></div>
         </div>
         <div class="x_content">
-            <h4>App Usage across versions</h4>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Тип</th>
+                    <th>Количество</th>
 
-
-        </div>
-    </div>
-</div>
-<div class="col-md-6 col-sm-6 col-xs-12">
-    <div class="x_panel tile fixed_height_320">
-        <div class="x_title">
-            <h2>Количество задач по проектам</h2>
-            <div class="clearfix"></div>
-        </div>
-        <div class="x_content">
-            <h4>App Usage across versions</h4>
-            <div class="widget_summary">
-                <div class="w_left w_25">
-                    <span>0.1.5.2</span>
-                </div>
-                <div class="w_center w_55">
-                    <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
-                            <span class="sr-only">60% Complete</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="w_right w_20">
-                    <span>123k</span>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="widget_summary">
-                <div class="w_left w_25">
-                    <span>0.1.5.3</span>
-                </div>
-                <div class="w_center w_55">
-                    <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
-                            <span class="sr-only">60% Complete</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="w_right w_20">
-                    <span>53k</span>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="widget_summary">
-                <div class="w_left w_25">
-                    <span>0.1.5.4</span>
-                </div>
-                <div class="w_center w_55">
-                    <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
-                            <span class="sr-only">60% Complete</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="w_right w_20">
-                    <span>23k</span>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="widget_summary">
-                <div class="w_left w_25">
-                    <span>0.1.5.5</span>
-                </div>
-                <div class="w_center w_55">
-                    <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 5%;">
-                            <span class="sr-only">60% Complete</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="w_right w_20">
-                    <span>3k</span>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="widget_summary">
-                <div class="w_left w_25">
-                    <span>0.1.5.6</span>
-                </div>
-                <div class="w_center w_55">
-                    <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
-                            <span class="sr-only">60% Complete</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="w_right w_20">
-                    <span>1k</span>
-                </div>
-                <div class="clearfix"></div>
-            </div>
+                </tr>
+                </thead>
+                <tbody>
+                <?php $i = 0 ; foreach (Issue::getAllForType() as $type => $count): $i++;
+                    ?>
+                    <tr>
+                        <th scope="row"><?= $i ?></th>
+                        <td><?= $type ?></td>
+                        <td ><?= $count ?></td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
 
         </div>
     </div>

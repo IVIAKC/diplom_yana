@@ -140,7 +140,7 @@ class Issue extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getSubIssue()
+    public function getParent()
     {
         return $this->hasOne(Issue::className(), ['id' => 'parent_issue']);
     }

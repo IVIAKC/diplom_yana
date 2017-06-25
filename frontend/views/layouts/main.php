@@ -3,6 +3,7 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+use common\models\extended\Issue;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
@@ -38,14 +39,19 @@ AppAsset::register($this);
                         </li>
                         <li><a><i class="fa fa-edit"></i> Задачи <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu" style="display: none;">
-                                <li><a href="/issue/index?type=my">Мои зачади</a></li>
+                                <li><a href="/issue/index?type=<?= Issue::TYPE_SOMEONE ?>">Мои зачади</a></li>
                                 <li><a href="/issue/index">Все зачади</a></li>
                             </ul>
                         </li>
                         <li><a><i class="fa fa-folder"></i> Проекты <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu" style="display: none;">
-                                <li><a href="/project/index?type=my">Мои проекты</a></li>
+                                <li><a href="/project/index?type=<?= Issue::TYPE_SOMEONE ?>">Мои проекты</a></li>
                                 <li><a href="/project/index">Все проекты</a></li>
+                            </ul>
+                        </li>
+                        <li><a><i class="fa fa-folder"></i> Статистика <span class="fa fa-chevron-down"></span></a>
+                            <ul class="nav child_menu" style="display: none;">
+                                <li><a href="/statistics/type">По типу</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -63,14 +69,16 @@ AppAsset::register($this);
                     <ul class="nav navbar-nav navbar-right">
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <img src="/img/profile_avatar.jpg" alt="">John Doe
+                                <img src="/img/profile_avatar.jpg" alt=""><?= empty(Yii::$app->user->identity->username) ?
+                                        Html::a('Войти', '/site/login')
+                                    : Yii::$app->user->identity->username ?>
                             </a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </div>
-        <div class="right_col" role="main" style="min-height: 990px;">
+        <div class="right_col" role="main" style="min-height: 1990px;">
             <div class="row col-lg-12">
                 <?= $content ?>
             </div>

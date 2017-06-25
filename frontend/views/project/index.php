@@ -21,7 +21,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+        'tableOptions' => [
+            'class' => 'table',
+        ],
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
@@ -66,8 +68,21 @@ $this->params['breadcrumbs'][] = $this->title;
                     1 => 'Да',
                 ]
             ],
-            'created_at',
-            'updated_at',
+            'created_at:date',
+            'updated_at:date',
+            [
+                'class' => 'yii\grid\ActionColumn',
+
+                'buttons'=>[
+                    'view'=>function ($url, $model) {
+                        $customurl=Yii::$app->getUrlManager()->createUrl(['project/view','id'=>$model['id']]); //$model->id для AR
+                        return \yii\helpers\Html::a( '<span class="glyphicon glyphicon-eye-open"></span>', $customurl,
+                            ['title' => Yii::t('yii', 'View'), 'data-pjax' => '0']);
+                    }
+                ],
+                'template'=>'{view}',
+
+            ],
 
         ],
     ]); ?>

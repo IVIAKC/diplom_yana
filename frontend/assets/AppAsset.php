@@ -22,6 +22,7 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
         'js/script.js?v1',
+        'js/chart.min.js'
     ];
 
 }

@@ -1,5 +1,9 @@
 <?php
+use common\models\extended\Issue;
+?>
+<?php
 
+use common\models\extended\Client;
 use common\models\extended\Priority;
 use common\models\extended\Project;
 use common\models\extended\Status;
@@ -9,25 +13,24 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel common\models\search\IssueSearch */
+/* @var $searchModel common\models\search\ProjectSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Задачи';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="issue-index">
+<div class="project-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <h1><?=Html::encode($this->title) ?></h1>
 
-    <p>
-        <?= Html::a('Создать Задачу', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
     <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+        'dataProvider' => $issueProvider,
+        'tableOptions' => [
+            'class' => 'table',
+        ],
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
+
 
             'summary',
             [
@@ -43,7 +46,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'priority_id',
                 'format' => 'html',
                 'value' => function($data){
-                    return Html::a($data->priority->name,['priority/view', 'id' => $data->priority_id]);
+                    return $data->priority->getColorView();
                 },
                 'filter' => Priority::getPriorityList(),
 
@@ -102,19 +105,22 @@ $this->params['breadcrumbs'][] = $this->title;
 
             ],
 
-             'created_at:date',
-             [
-                 'attribute' => 'is_deleted',
-                 'value' => function ($data) {
-                    return $data->is_deleted ? 'Да' : 'Нет';
-                 },
-                 'filter' => [
-                         0 => 'Нет',
-                         1 => 'Да',
-                 ]
-             ],
+            'created_at:date',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+
+                'buttons'=>[
+                    'view'=>function ($url, $model) {
+                        $customurl=Yii::$app->getUrlManager()->createUrl(['issue/view','id'=>$model['id']]); //$model->id для AR
+                        return \yii\helpers\Html::a( '<span class="glyphicon glyphicon-eye-open"></span>', $customurl,
+                            ['title' => Yii::t('yii', 'View'), 'data-pjax' => '0']);
+                    }
+                ],
+                'template'=>'{view}',
+
+            ],
+
         ],
     ]); ?>
 </div>

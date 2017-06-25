@@ -49,9 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'type_id',
                 'format' => 'html',
-                'value' => function($data){
-                    return Html::a($data->type->name,['type/view', 'id' => $data->type_id]);
-                },
+
                 'filter' => Type::getTypeList(),
 
             ],
@@ -94,7 +92,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'project_id',
                 'format' => 'html',
                 'value' => function($data){
-                    return Html::a($data->project->username,['project/view', 'id' => $data->project_id]);
+                    return Html::a($data->project->name,['project/view', 'id' => $data->project_id]);
                 },
                 'filter' => Project::getProjectList(),
 

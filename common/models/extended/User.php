@@ -33,6 +33,9 @@ use Yii;
  */
 class User extends \yii\db\ActiveRecord
 {
+    const TYPE_ALL_ISSUE = 0;
+    const TYPE_MY_ISSUE = 1;
+    const TYPE_MY_REPORT_ISSUE = 1;
     /**
      * @inheritdoc
      */
@@ -85,5 +88,9 @@ class User extends \yii\db\ActiveRecord
 
     public static function getUserList(){
         return self::find()->select('username')->orderBy('username')->indexBy('id')->column();
+    }
+
+    public function getCurrentIssues($type = null){
+
     }
 }

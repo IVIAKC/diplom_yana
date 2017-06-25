@@ -3,6 +3,7 @@
 namespace common\models\extended;
 
 use Yii;
+use yii\web\NotFoundHttpException;
 
 /**
  * This is the model class for table "issue".
@@ -35,6 +36,10 @@ use Yii;
  */
 class Issue extends \common\models\Issue
 {
+
+    const TYPE_ALL = 0;
+    const TYPE_SOMEONE = 1;
+
     /**
      * @inheritdoc
      */
@@ -75,7 +80,7 @@ class Issue extends \common\models\Issue
             'priority_id' => 'Приоритет',
             'type_id' => 'Тип',
             'status_id' => 'Статус',
-            'reporter_id' => 'Reporter ID',
+            'reporter_id' => 'Наблюдатель',
             'assignee_id' => 'Ответственный',
             'creater_id' => 'Создатель',
             'project_id' => 'Проект',
@@ -91,5 +96,13 @@ class Issue extends \common\models\Issue
 
     public static function getIssueList(){
         return self::find()->select('summary')->orderBy('summary')->indexBy('id')->column();
+    }
+    public static function getAllArray($type = self::TYPE_ALL, $user_id = null){
+        if($type == self::TYPE_ALL)
+            return self::find()->all();
+        if($type == self::TYPE_SOMEONE)
+            if(empty($user_id))
+                throw new NotFoundHttpException();
+            return self::find()->where([])->all();
     }
 }

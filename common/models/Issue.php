@@ -152,4 +152,9 @@ class Issue extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Issue::className(), ['parent_issue' => 'id']);
     }
+
+    public function getType()
+    {
+        return $this->hasMany(Type::className(), ['type_id' => 'id']);
+    }
 }
